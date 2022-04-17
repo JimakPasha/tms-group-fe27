@@ -14,7 +14,7 @@
 + Из своей основной ветки `ivan-ivanov` создайте еще одну `git branch ivan-ivanov-hw-1`
 + Перейдите в новую ветку `git checkout ivan-ivanov-hw-1`
 + Добавьте файл `hw-1.js`
-+ Добавьте туда `console.log('Hello GitHub!')`
++ Добавьте туда `console.log('Hello GitHub!');`
 + Затем внесите изменения в индекс используя команду `git add hw-1.js` или просто `git add .`
 + Не забудем оставить комментарий к сохранению и напишем `git commit -m 'init(hw-1): start course Javascript Basic'`
 + Наконец отправим изменения на **github** с помощью команды `git push`
