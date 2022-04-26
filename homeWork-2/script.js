@@ -12,6 +12,9 @@ const min_in_hour = 60;
 const hour_in_day = 24;
 const day_in_year = 365;
 
+let myAgeInSeconds = (21 * day_in_year * hour_in_day * min_in_hour * sec_in_min);
+console.log(myAgeInSeconds);
+
 
 //3
 let count = 42
