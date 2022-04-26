@@ -1,3 +1,5 @@
+'use strict'
+
 // 1
 let x = 20
 let y = 58
@@ -31,6 +33,16 @@ console.log (typeof Number(userName));
 
 console.log (+userName);
 console.log (typeof (+userName));
+
+// 4
+let a = 1
+let b = 2
+let c = 'белых медведей'
+
+a = String(a);
+
+console.log (a + b + ' ' + c);
+
 
 
 
