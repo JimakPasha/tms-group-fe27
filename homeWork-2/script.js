@@ -20,16 +20,23 @@ console.log(myAgeInSeconds);
 let count = 42
 let userName = '42'
 
-let num = Number(userName);
+let num = Number(userName);//1
 console.log(typeof num);
 
-let str = String(count);
+console.log(+userName);//2
+console.log(typeof (+userName));
+
+let str = String(count);//1
 console.log(typeof str);
 
+console.log(count.toString());//2
+console.log(typeof count.toString());
+
+
 //4
-let a = 1
-let b = 2
-let c = "белых медведей"
+let a = 1;
+let b = 2;
+let c = "белых медведей";
 
 let st = String(a);
 console.log(typeof st);
@@ -37,9 +44,6 @@ console.log(typeof st);
 console.log(st + b + ' ' + c);
 
 //5
-let array = ['доступ', 'морпех', 'наледь', 'попрек', 'рубило'];
-console.log(array.length);
-
 let q = 'доступ';
 let d = 'морпех';
 let f = 'наледь';
@@ -47,20 +51,21 @@ let g = 'попрек';
 let h = 'рубило';
 
 console.log(q.length + d.length + f.length + g.length + h.length);
+
 //6
+let number = 1;
+console.log('Variable:', number, 'have type:', typeof number);
 
-let p = 1;
-let r = '1'
-let u = false;
+let text = "text";
+console.log('Variable:', text, 'have type:', typeof text);
 
-console.log(typeof (u));
-console.log(typeof (p));
-console.log(typeof (r));
+let False = false;
+console.log('Variable:', isTrue, 'have type:', typeof False);
 
 
 //7
-const username = prompt("Укажите своё имя:");
-const age = prompt("Укажите свой возраст:");
+const username = prompt('Укажите своё имя:');
+const age = prompt('Укажите свой возраст:');
 
 alert(username + ' ' + age);
 
@@ -73,3 +78,13 @@ b1 = a1 - b1;//4
 a1 = a1 - b1;//3
 
 console.log(a1, b1);
+
+//9
+let codeWord1 = "обернись";
+let codeWord2 = "неужели";
+let codeWord3 = "огурцы";
+let codeWord4 = "липкие";
+let codeWord5 = "?!";
+
+let cipher = (codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1]);
+console.log(cipher);
