@@ -43,6 +43,13 @@ a = String(a);
 
 console.log (a + b + ' ' + c);
 
+// 5
+let array = ['доступ', 'морпех', 'наледь','попрек', 'рубило'];
+
+console.log (array.length);
+
+
+
 
 
 
