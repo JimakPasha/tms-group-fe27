@@ -38,6 +38,16 @@ console.log("Type userName is", typeof(+userName));
   let lengthWords = access + marine + frost + reproach + chopped;
   console.log("Task 5:", lengthWords.length);
 
+
+  //Task 6 
+  console.log("Task 6:")
+  let num = 1;
+  let text = "Egor";
+  let bool = false;
+  console.log( `Variable: ${num} have type: ${typeof(num)}`);
+  console.log( `Variable: ${text} have type: ${typeof(text)}`);
+  console.log( `Variable: ${bool} have type: ${typeof(bool)}`);
+
   //Task 7
   const user = prompt("Как вас зовут?");
   const age = prompt("Какой у вас возраст?");
