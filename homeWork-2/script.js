@@ -48,6 +48,23 @@ let array = ['доступ', 'морпех', 'наледь','попрек', 'р�
 
 console.log (array.length);
 
+// 6 - не понял ((
+let text = 'a';
+console.log ()
+
+let number = 1;
+
+
+let boolean = true;
+
+// 7 
+const username = prompt ('Ваше имя:');
+const age = prompt ('Ваш возраст:');
+
+alert (username + ' ' + age);
+
+
+
 
 
 
