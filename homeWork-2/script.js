@@ -37,10 +37,10 @@ console.log(lengthWords);
 const lengthWords2 = ((`${word1}${word2}${word3}${word4}${word5}`).length);
 console.log(lengthWords2);
 // Task 6
-const typeConst = 'typeConst have type: const';
+const typeConst = `Variable: typeConst have type: const`;
 let typeLet = 'typeLet have type: let';
 var typeVar = 'typeVar have type: var';
-console.log(`Variable: ${typeConst}`);
+console.log(typeConst);
 console.log(`Variable: ${typeLet}`);
 console.log(`Variable: ${typeVar}`);
 // Task 7
