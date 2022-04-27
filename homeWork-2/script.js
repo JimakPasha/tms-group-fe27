@@ -76,7 +76,8 @@ a1 = b1 + a1;
 b1 = a1 - b1;
 a1 = a1 - b1; 
 
-console.log (a1 + b1);
+console.log (a1);
+console.log (b1);
 
 // adv2
 const codeWord1 = "обернись";
