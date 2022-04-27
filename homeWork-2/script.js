@@ -37,12 +37,12 @@ console.log(lengthWords);
 const lengthWords2 = ((`${word1}${word2}${word3}${word4}${word5}`).length);
 console.log(lengthWords2);
 // Task 6
-const typeConst = '`Variable: %variable name% have type: %type variable%`';
-let typeLet = '`Variable: %variable name% have type: %type variable%`';
-var typeVar = '`Variable: %variable name% have type: %type variable%`';
-console.log(typeConst);
-console.log(typeLet);
-console.log(typeVar);
+const typeConst = 'typeConst have type: const';
+let typeLet = 'typeLet have type: let';
+var typeVar = 'typeVar have type: var';
+console.log(`Variable: ${typeConst}`);
+console.log(`Variable: ${typeLet}`);
+console.log(`Variable: ${typeVar}`);
 // Task 7
 const yourName = prompt('Как тебя зовут?');
 const yourAge = prompt('Сколько тебе лет?');
