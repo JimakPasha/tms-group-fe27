@@ -54,13 +54,13 @@ console.log (letters.length);
 
 // 6 - не понял ((
 let textHolder = 'Stepan';
-console.log (`Veriable: ${textHolder} have type: ${String}`);
+console.log (`Veriable: ${textHolder} have type: ${typeof textHolder}`);
 
 let number = 123;
-console.log (`Veriable: ${number} have type: ${Number}`);
+console.log (`Veriable: ${number} have type: ${typeof number}`);
 
 let booleanText = true;
-console.log (`Veriable: ${booleanText} have type: ${Boolean}`);
+console.log (`Veriable: ${booleanText} have type: ${typeof booleanText}`);
 
 // 7 
 const username = prompt ('Ваше имя:');
