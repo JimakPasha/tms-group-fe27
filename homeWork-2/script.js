@@ -53,13 +53,14 @@ let letters = (word1 + word2 + word3 + word4 + word5);
 console.log (letters.length);
 
 // 6 - не понял ((
-let text = 'a';
-console.log ()
+let textHolder = 'Stepan';
+console.log (`Veriable: ${textHolder} have type: ${String}`);
 
-let number = 1;
+let number = 123;
+console.log (`Veriable: ${number} have type: ${Number}`);
 
-
-let boolean = true;
+let booleanText = true;
+console.log (`Veriable: ${booleanText} have type: ${Boolean}`);
 
 // 7 
 const username = prompt ('Ваше имя:');
@@ -69,14 +70,14 @@ alert (username + ' ' + age);
 
 // adv1 - не понял
 
-//adv2 - не понял
+// adv2 - ???
 const codeWord1 = "обернись";
 const codeWord2 = "неужели";
 const codeWord3 = "огурцы";
 const codeWord4 = "липкие";
 const codeWord5 = "?!";
 
-let cipher = codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1];
+let cipher = (codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1]);
 console.log (cipher);
 
 
