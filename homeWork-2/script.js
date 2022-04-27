@@ -68,15 +68,17 @@ const age = prompt ('Ваш возраст:');
 
 alert (username + ' ' + age);
 
-// adv1 - не понял
-let text1 = 4;
-let text2 = 3;
+// adv1
+let a1 = 4;
+let b1 = 3;
 
-[text1, text2] = [text2, text1];
+a1 = b1 + a1;
+b1 = a1 - b1;
+a1 = a1 - b1; 
 
-console.log (text1, text2);
+console.log (a1 + b1);
 
-// adv2 - ??? не показывает в консоли 
+// adv2
 const codeWord1 = "обернись";
 const codeWord2 = "неужели";
 const codeWord3 = "огурцы";
@@ -85,15 +87,3 @@ const codeWord5 = "?!";
 
 let cipher = (codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1]);
 console.log (cipher);
-
-
-
-
-
-
-
-
-
-
-
-
