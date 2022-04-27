@@ -70,17 +70,14 @@ alert (username + ' ' + age);
 // adv1 - не понял
 
 //adv2 - не понял
+const codeWord1 = "обернись";
+const codeWord2 = "неужели";
+const codeWord3 = "огурцы";
+const codeWord4 = "липкие";
+const codeWord5 = "?!";
 
-const cipher = [
-codeWord1 = "обернись",
-codeWord2 = "неужели",
-codeWord3 = "огурцы",
-codeWord4 = "липкие",
-codeWord5 = "?!"
-];
-
-let ciph = (codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1]);
-console.log (cipher[1]);
+let cipher = codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1];
+console.log (cipher);
 
 
 
