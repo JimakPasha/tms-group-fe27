@@ -20,8 +20,10 @@ console.log("Result Task 2: ", myAgeInSeconds, "seconds in my life!");
 console.log('Task 3:')
 let count = 42;
 let userName = '42';
+console.log("Type count is", typeof(count.toString()));
 console.log("Type count is", typeof(String(count)));
 console.log("Type userName is", typeof(+userName));
+console.log("Type userName is", typeof(Number(userName)));
 
 //Task 4
   let a = 1;
