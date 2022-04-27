@@ -42,13 +42,9 @@
 // console.log(`Всего ${lengthWords} букв`);
 
 //? Task 6
-// let newVar = `Variable: %variable name% have type: %type variable%`;
-// var oldVar = `Variable: %variable name% have type: %type variable%`;
-// const cons = `Variable: %variable name% have type: %type variable%`;
-
-// console.log(newVar);
-// console.log(oldVar);
-// console.log(cons);
+let newVar = `%variable name% have type:`;
+const cons = `%type variable%`;
+console.log(`Variable: ${newVar} have type: ${cons}`);
 
 //? Task 7
 // let age = prompt(`Сколько тебе лет?`);
