@@ -35,8 +35,8 @@ console.log (+userName);
 console.log (typeof (+userName));
 
 // 4
-let a = 1
-let b = 2
+let a = 1;
+let b = 2;
 let c = 'белых медведей'
 
 a = String(a);
@@ -69,8 +69,14 @@ const age = prompt ('Ваш возраст:');
 alert (username + ' ' + age);
 
 // adv1 - не понял
+let text1 = 4;
+let text2 = 3;
 
-// adv2 - ???
+[text1, text2] = [text2, text1];
+
+console.log (text1, text2);
+
+// adv2 - ??? не показывает в консоли 
 const codeWord1 = "обернись";
 const codeWord2 = "неужели";
 const codeWord3 = "огурцы";
