@@ -44,9 +44,13 @@ a = String(a);
 console.log (a + b + ' ' + c);
 
 // 5
-let array = ['доступ', 'морпех', 'наледь','попрек', 'рубило'];
-
-console.log (array.length);
+let word1 = 'доступ'; 
+let word2 = 'морпех';
+let word3 = 'наледь';
+let word4 = 'попрек';
+let word5 = 'рубило';
+let letters = (word1 + word2 + word3 + word4 + word5);
+console.log (letters.length);
 
 // 6 - не понял ((
 let text = 'a';
