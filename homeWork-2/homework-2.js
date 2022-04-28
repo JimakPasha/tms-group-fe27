@@ -1,5 +1,6 @@
 'use strict'
 //? Task 1
+// let x = 20;
 // let y = 58; 
 // let z = 42; 
 // console.log (x + y + z);
@@ -16,6 +17,7 @@
 // let count = 42;
 // let userName = '42';
 // console.log(typeof(String(count)));
+// console.log(typeof(count.toString()));
 // console.log(typeof(+userName));
 // console.log(typeof(Number(userName)));
 
@@ -42,9 +44,12 @@
 // console.log(`Всего ${lengthWords} букв`);
 
 //? Task 6
-let newVar = `%variable name% have type:`;
-const cons = `%type variable%`;
-console.log(`Variable: ${newVar} have type: ${cons}`);
+let num = 101;
+let string = 'hello';
+let boolean = false;
+console.log(`Variable: ${num} have type: ${typeof(num)}`);
+console.log(`Variable: ${string} have type: ${typeof(string)}`);
+console.log(`Variable: ${boolean} have type: ${typeof(boolean)}`);
 
 //? Task 7
 // let age = prompt(`Сколько тебе лет?`);
@@ -68,10 +73,10 @@ b = a; // 4
 console.log(`value-b: ${b}`); //4
 
 //? Task 2 👨‍🏫 
-// let codeWord1 = "обернись";
-// let codeWord2 = "неужели";
-// let codeWord3 = "огурцы";
-// let codeWord4 = "липкие";
-// let codeWord5 = "?!";
+let codeWord1 = "обернись";
+let codeWord2 = "неужели";
+let codeWord3 = "огурцы";
+let codeWord4 = "липкие";
+let codeWord5 = "?!";
 
-// console.log(`${codeWord1.substr(1, 1)}${codeWord2.substr(1, 1)}${codeWord3.substr(1, 1)}${codeWord4.substr(1, 1)}${codeWord5.substr(1, 1)}`);
+console.log(`${codeWord1.substr(1, 1)}${codeWord2.substr(1, 1)}${codeWord3.substr(1, 1)}${codeWord4.substr(1, 1)}${codeWord5.substr(1, 1)}`);
