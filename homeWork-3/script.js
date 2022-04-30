@@ -28,3 +28,18 @@ for (let task3 = 1; task3 <= 20; task3++) {
         console.log (task3);
     }
 }
+
+// task 4
+
+let key = true;
+let documents = true;
+let pen = true;
+let apple = false;
+let orange = true;
+
+let shouldGoToWork = (key && documents && pen) && (apple || orange);
+if (shouldGoToWork == false) {
+    console.log ('Взяли всё необходимое');
+} else {
+    console.log ('Мы что-то забыли');
+}
