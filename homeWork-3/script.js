@@ -21,3 +21,10 @@ if (height > width) {
     console.log (width);
 }
 
+// task 3
+
+for (let task3 = 1; task3 <= 20; task3++) {
+    if (task3 % 3 == 0) {
+        console.log (task3);
+    }
+}
