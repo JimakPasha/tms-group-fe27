@@ -1,0 +1,74 @@
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Yellowtail', cursive;
+$header-color:#274C5B;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto','Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.wrapper {
+    max-width: 1440px;
+    padding: 0 30px;
+}
+.button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 17px;
+}
+.header .wrapper{
+    color: $header-color;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100px;
+}
+.header-nav {
+    margin-left: auto;
+}
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav__item:not(:last-child) {
+    margin-right: 25px;
+}
+.nav__link {
+    color: inherit;
+}
+.header__cart {
+    margin-left: auto;
+    width: 160px;
+    min-height: 70px;
+    border: 1px solid #D4D4D4;
+    border-radius: 33px;
+    padding: 5px 11px;
+    column-gap: 10px;
+    color: inherit;
+}
+.cart-icon {
+    background-color: $header-color;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    position: relative;
+}
+.cart-icon::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/cart.svg);
+    width: 26px;
+    height: 24px;
+}
