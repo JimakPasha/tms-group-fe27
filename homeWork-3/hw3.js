@@ -91,6 +91,6 @@ while (ladder.length < 7) {
     ladder += '#';
 }
 // or
-for (lad = '#'; lad.length < 7; lad += '#') {
+for (let lad = '#'; lad.length < 7; lad += '#') {
     console.log(lad);
 }
