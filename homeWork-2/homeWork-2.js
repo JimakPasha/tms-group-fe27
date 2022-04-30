@@ -3,7 +3,7 @@
 let x = 20;
 let y = 58;
 let z = 42;
-let f = (x+y+z);
+let f = (x + y + z);
 console.log(f);
 
 //Task2
@@ -22,7 +22,7 @@ let count = 42
 let userName = '42'
 
 console.log(String(count));
-console.log(count+'');
+console.log(count + '');
 
 console.log(+userName);
 console.log(Number(userName));
@@ -34,7 +34,7 @@ let a = 1;
 let b = 2;
 let c = "белых медведей";
 
-console.log( a +'' + b +'' + ' ' + 'белых медведей');
+console.log(a + '' + b + '' + ' ' + 'белых медведей');
 
 //Task5
 
@@ -44,17 +44,16 @@ let three = 'наледь';
 let four = 'попрек';
 let five = 'рубило';
 let lengthWords = (one + two + three + four + five);
-console.log(lengthWords.leng);
+console.log(lengthWords.length);
 
 //Task6  ?????
-const namber = 13;
-const firstName = 'Toni';
-const boolean = true;
+const usName = 'Toni';
+const number = 13;
+const bool = true;
 
-console.log();
-console.log();
-console.log();
-
+console.log(`Variable: ${usName} have type: ${typeof (usName)}`);
+console.log(`Variable: ${number} have type: ${typeof (number)}`);
+console.log(`Variable: ${bool} have type: ${typeof (bool)}`);
 
 //Task7
 
@@ -80,9 +79,6 @@ let codeWord2 = "неужели";
 let codeWord3 = "огурцы";
 let codeWord4 = "липкие";
 let codeWord5 = "?!";
-
-console.log(codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1]);
-
-
-let cipher ='беги!';
+let cipher = codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1];
+console.log(cipher);
 
