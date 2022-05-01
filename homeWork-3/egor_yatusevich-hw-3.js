@@ -4,7 +4,7 @@
    let a = 'true';
     let b = false;
     let c = 17;
-    let d ;
+    let d;
     let e = null;
     console.log("Task 1:");
     console.log(typeof(a));
@@ -18,18 +18,17 @@
     let height = 15;
     let width = 20;
     console.log("Task 2:");
-    if(width>height){
+    if (width>height) {
         console.log("width =", width);
-    }
-    else{
+    } else {
         console.log("height =", height);  
     }
 
 
 //Task 3
 console.log("Task:3:")
-for(let i = 1; i<=20; i++){
-if( !(i % 3)){
+for (let i = 1 ; i <=20 ; i++){
+if (!(i % 3)) {
     console.log(i);
 }
 }
@@ -42,11 +41,10 @@ let apple = false;
 let orange = true;
 let shouldGoToWork;
 console.log("Task 4:");
-if(key && documents && pen && (apple || orange)){
+if (key && documents && pen && (apple || orange)) {
     shouldGoToWork = "Можем идти на работу!";
     console.log(shouldGoToWork);
-}
-else{
+} else {
     shouldGoToWork ="Не можем пойти на работу!";
     console.log(shouldGoToWork);  
 }
@@ -55,35 +53,31 @@ else{
 //Task 5
 let num;
 num = prompt("Введите число!");
-if(!(num % 5) && !(num % 3)){
+if (!(num % 5) && !(num % 3)) {
     alert("BuzFiz");
-}
-else if(!(num % 3)){
+} else if (!(num % 3)) {
     alert("Buz");
-}
-else if(!(num % 5)){
+} else if (!(num % 5)) {
     alert("Fiz");
-}
-else{
+} else {
     alert("Не делиться ни на 3 ни на 5");  
 }
 
 
 //Task 6
 let yourAge = prompt("Сколько бродишь на этом свете, Дружочек?");
-if(yourAge  == 16 || yourAge == 17){
+if (yourAge  == 16 || yourAge == 17) {
     alert("Можешь выкурить сигаретку, только маме не говори");
-}
-else if(yourAge < 18){
+} else if (yourAge < 18) {
     alert("Попей колу");
-}else if(yourAge >= 18){
+} else if (yourAge >= 18) {
     alert("Попей пивка!");
 }
 
 //Task 7
 
 let userDirection = prompt("Куда путь держишь, странник?(север, юг, запад, восток)");
-switch(userDirection){
+switch (userDirection) {
     case "юг":
         alert(" На юг пойдешь счастье найдешь!");
         break;
@@ -103,13 +97,13 @@ switch(userDirection){
 //Task 1 Advance
 let yourName = prompt("Какое у вас ФИО?");
 yourName = yourName.trim().toLowerCase().replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
- alert(yourName);
+alert(yourName);
 
 
 //Task 2 Advance
 let userNum = prompt("Введите число с которым хотите произвести математические операции!");
 let minus = prompt("Введите число, которое вы хотите отнять!");
-Num = userNum;
+let Num = userNum;
 alert(Num -= +minus);
 let plus = prompt("Введите число, которое вы хотите прибавить!");
 alert(Num += +plus);
@@ -122,7 +116,7 @@ alert(`((((${userNum} - ${minus}) + ${plus}) * ${multiply}) / ${division} = ${Nu
 
 //Task 3 Advance
 let hash = "";
-for(i = 0; i < 6; i++){
+for (i = 0; i < 6; i++) {
     hash += "#";
     console.log(hash);
 }
