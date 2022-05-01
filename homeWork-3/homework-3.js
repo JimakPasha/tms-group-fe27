@@ -32,7 +32,7 @@
 
 //? Task4
 function checkGoWork () {
-    if (key === true && documents === true && pen === true && apple === true || orange === true) {
+    if (key && documents && pen && apple || orange) {
         console.log('Молодец все взял');
     }else {
         console.log('Ты ничего не забыл ?');
@@ -58,12 +58,6 @@ let shouldGoToWork = checkGoWork();
 // }
 // let inputNum = +prompt('Введите любой число от 0 до 100', [1]);
 // checkInputValue();
-// // switch (inputNum) {
-// //     case inputNum % 5 === 0:
-// //         console.log('Fiz');
-// //         break;
-// // }
-
 //? Task6 
 // function checkUserAge () {
 //     if (userAge >= 12 && userAge <= 16) {
@@ -78,30 +72,36 @@ let shouldGoToWork = checkGoWork();
 // checkUserAge();
 
 //? Task7 
-// function whereHolidayPlace () {
-//     switch (holidayPlace) {
-//         case south:
-//             console.log('на юг пойдешь счастье найдешь');
-//             break;
-//         case north: 
-//             console.log('на север пойдешь много денег найдешь');
-//             break;
-//         case westSide: 
-//             console.log('запад на запад пойдешь верного друга найдешь');
-//             break; 
-//         case eastSide:
-//             console.log('восток на восток пойдешь разработчиком станешь');
-//             break;
-//         default: 
-//             console.log ('Простите но таких мест я не знаю');    
-//     }
-// }
-// let holidayPlace = prompt('Введите куда хотите отправиться', ['восток'] );
-// const south = 'юг';
-// const north = 'север';
-// const westSide = 'запад';
-// const eastSide = 'восток';
-// whereHolidayPlace();
+function whereHolidayPlace () {
+    switch (holidayPlace) {
+        case south:
+            console.log('на юг пойдешь счастье найдешь');
+            break;
+        case north: 
+            console.log('на север пойдешь много денег найдешь');
+            break;
+        case westSide: 
+            console.log('запад на запад пойдешь верного друга найдешь');
+            break; 
+        case eastSide:
+            console.log('восток на восток пойдешь разработчиком станешь');
+            break;
+    }
+}
+
+function checkEmptyPrompt () {
+        while (holidayPlace === '' || holidayPlace === null) {
+            holidayPlace = prompt('Введите куда хотите отправиться', ['восток'] );
+        }
+        whereHolidayPlace();
+}
+let holidayPlace = prompt('Введите куда хотите отправиться', ['восток'] );
+const south = 'юг';
+const north = 'север';
+const westSide = 'запад';
+const eastSide = 'восток';
+whereHolidayPlace();
+checkEmptyPrompt();
 
 //! ADVANCED level
 //Task 1 👨‍🏫 
