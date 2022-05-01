@@ -31,22 +31,20 @@
 // }
 
 //? Task4
-// let key = true;
-// let documents = true;
-// let pen = true;
-// let apple = false;
-// let orange = true;
+function checkGoWork () {
+    if (key === true && documents === true && pen === true && apple === true || orange === true) {
+        console.log('Молодец все взял');
+    }else {
+        console.log('Ты ничего не забыл ?');
+    }
+}
+let key = true;
+let documents = true;
+let pen = true;
+let apple = true;
+let orange = false;
 
-// function checkGoWork () {
-//     if (key === true && documents === true) {
-//         console.log(`ключи:${key} документы:${documents}`);
-//     }else if (key === !true || documents === !true) {
-//         console(`Проверь ты все взял! ключи, документы?`);
-//     }if (apple === true || orange === true) {
-//         console.log ('Молодец ты не забыл ПП');
-//     }
-// }
-// let shouldGoToWork = checkGoWork();
+let shouldGoToWork = checkGoWork();
 
 //? Task5 
 // function checkInputValue () {
@@ -124,11 +122,6 @@
 
 //Task 2 👨‍🏫 
 // function numMath (num1, num2, num3, num4, num5) {
-//     arguments[0] = num1;
-//     arguments[1] = num2;
-//     arguments[2] = num3;
-//     arguments[3] = num4;
-//     arguments[4] = num5;
 //     console.log('Result: ' + ((((num1 - num2) + num3) * num4)) / num5);
 //     console.log(`Formula: ((((${num1} - ${num2}) + ${num3}) * ${num4})) / ${num5}`);
 // }
