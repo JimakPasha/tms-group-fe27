@@ -2,12 +2,12 @@
 
 //1
 
-let a = 'true';
-let b = false;
-let c = 17;
-let d = undefined;
-let f = null;
-console.log(typeof (a), (b), (c), (d), (f));
+let string = 'true';
+let boolean = false;
+let num = 17;
+let under = undefined;
+let nul = null;
+console.log(typeof(string), typeof(boolean), typeof(num), typeof(under), typeof(nul));
 
 
 //2 использовал математические функции
@@ -20,6 +20,8 @@ console.log(max);
 //2 способ
 if (width > height) {
     console.log(width);
+} else{
+    console.log(height);
 }
 
 //3
@@ -38,11 +40,7 @@ let apple = false;
 let orange = true;
 
 let shouldGoToWork = (key && documents && pen) && (apple || orange);
-if (shouldGoToWork == true) {
-    console.log('Готов к работе');
-} else {
-    console.log('Что-то забыли');
-}
+console.log(shouldGoToWork);
 
 //5
 let userNumber = prompt('Введите число');
