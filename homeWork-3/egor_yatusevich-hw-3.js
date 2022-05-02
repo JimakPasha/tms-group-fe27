@@ -27,7 +27,7 @@
 
 //Task 3
 console.log("Task:3:")
-for (let i = 1 ; i <=20 ; i++){
+for (let i = 1; i<=20; i++){
 if (!(i % 3)) {
     console.log(i);
 }
@@ -68,7 +68,8 @@ if (!(num % 5) && !(num % 3)) {
 let yourAge = prompt("Сколько бродишь на этом свете, Дружочек?");
 if (yourAge  == 16 || yourAge == 17) {
     alert("Можешь выкурить сигаретку, только маме не говори");
-} else if (yourAge < 18) {
+}
+else if (yourAge < 18) {
     alert("Попей колу");
 } else if (yourAge >= 18) {
     alert("Попей пивка!");
@@ -97,21 +98,21 @@ switch (userDirection) {
 //Task 1 Advance
 let yourName = prompt("Какое у вас ФИО?");
 yourName = yourName.trim().toLowerCase().replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
-alert(yourName);
+ alert(yourName);
 
 
 //Task 2 Advance
 let userNum = prompt("Введите число с которым хотите произвести математические операции!");
 let minus = prompt("Введите число, которое вы хотите отнять!");
-let Num = userNum;
-alert(Num -= +minus);
+let result = userNum;
+alert(result -= +minus);
 let plus = prompt("Введите число, которое вы хотите прибавить!");
-alert(Num += +plus);
+alert(result += +plus);
 let multiply = prompt("Введите число, на которое вы хотите умножить!");
-alert(Num *= +multiply);
+alert(result *= +multiply);
 let division = prompt("Введите число, на которое вы хотите поделить!");
-alert(Num /= +division);
-alert(`((((${userNum} - ${minus}) + ${plus}) * ${multiply}) / ${division} = ${Num})`);
+alert(result /= +division);
+alert(`((((${userNum} - ${minus}) + ${plus}) * ${multiply}) / ${division} = ${result})`);
 
 
 //Task 3 Advance
