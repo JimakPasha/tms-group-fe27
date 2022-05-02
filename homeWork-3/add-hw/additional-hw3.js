@@ -32,22 +32,22 @@
 // Код возьмите из предыдущего домашнего задания и рабойтайте и переделывайте его
 
 // Задание 3
-// •	Какое будет выведено значение: let x = 5; alert(x++); ?
-// •	Что выведет этот код: alert("1"[0]) ?
-// •	Чему равно 2 && 1 && null && 0 && undefined ?
-// •	Есть ли разница между выражениями ? !!(a && b) и(a && b) ?
-// •	Что выведет этот код: console.log(null || 2 && 3 || 4); ?
-// •	Что выведет этот код: alert(+"Infinity"); ?
-// •	Чему равно 0 || "" || 2 || undefined || true || falsе ?
-// •	что будет в консоле? console.log(2 && 3 && '' && null && 8 || null || 79 || +'83' && +'0');
-// •	что будет в консоле? console.log(2 && 3 && '' && null && (8 || null) || (79 || +'83' && +'0'));
-// •	что будет в консоле? console.log(NaN && Infinity);
-// •	что будет в консоле? console.log('' || null || NaN || undefined || +'0' || '');
-// •	что будет в консоле? let x; let y = 1; console.log(x && y);
-// •	что будет в консоле? let x; let y = 1; console.log(x && y || NaN && 'Name');
-// •	что будет в консоле? console.log(!3 && 'NaN');
-// •	что будет в консоле? console.log('' || null || NaN || undefined || +'0' || '');
-// •	что будет в консоле? console.log(0 && 1 + 'string');
-// •	что будет в консоле? console.log(+'JavaScript' && !'NaN' || 'null' || 1 + 'string' && 8043423405);
-// •	что будет в консоле? console.log(+'1' || NaN && 90 - 23 && 23 || 0 && -0);
-//      составьте сами ещё 3-4 довольно сложных примера с операторами && || ! и решите
+// •	Какое будет выведено значение: let x = 5; alert(x++); ? Answer: 6
+// •	Что выведет этот код: alert("1"[0]) ? Answer: '1' 0 
+// •	Чему равно 2 && 1 && null && 0 && undefined ? Answer: && и ост на посл true 1 
+// •	Есть ли разница между выражениями ? !!(a && b) и(a && b) ? Answer: нету потому что 2 не перезапишутся
+// •	Что выведет этот код: console.log(null || 2 && 3 || 4); ? Answer: 4 
+// •	Что выведет этот код: alert(+"Infinity"); ? Answer: +Infinity
+// •	Чему равно 0 || "" || 2 || undefined || true || falsе ? Answer: 2 или возвр перв true
+// •	что будет в консоле? console.log(2 && 3 && '' && null && 8 || null || 79 || +'83' && +'0'); Answer: 3
+// •	что будет в консоле? console.log(2 && 3 && '' && null && (8 || null) || (79 || +'83' && +'0')); Answer: 8
+// •	что будет в консоле? console.log(NaN && Infinity); Answer: Infinity
+// •	что будет в консоле? console.log('' || null || NaN || undefined || +'0' || ''); Answer: ''
+// •	что будет в консоле? let x; let y = 1; console.log(x && y); Answer: x;
+// •	что будет в консоле? let x; let y = 1; console.log(x && y || NaN && 'Name'); Answer: x;
+// •	что будет в консоле? console.log(!3 && 'NaN'); Answer: 'NaN'
+// •	что будет в консоле? console.log('' || null || NaN || undefined || +'0' || ''); Answer: ''
+// •	что будет в консоле? console.log(0 && 1 + 'string'); Answer: 1;
+// •	что будет в консоле? console.log(+'JavaScript' && !'NaN' || 'null' || 1 + 'string' && 8043423405); Answer: NaN 
+// •	что будет в консоле? console.log(+'1' || NaN && 90 - 23 && 23 || 0 && -0); Answer: 1
+//      составьте сами ещё 3-4 довольно сложных примера с операторами && || ! и решите 
