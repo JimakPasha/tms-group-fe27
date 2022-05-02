@@ -6,12 +6,10 @@ let lastFilmReview = +prompt ('На сколько оцените его? от 1
 //? add-hw: Task-2
 let personalMovieDB = {
     count: numberOfFilms,
-    'movies name': {
+    movies: {
         // 'Peaky Blinders': 9,
-        film: lastWatchFilm,
-    },
-    'movies raiting': {
-        raiting: lastFilmReview,
+        name: lastWatchFilm,
+        raiting: lastFilmReview
     },
     actors: {},
     genres: [],
