@@ -31,11 +31,6 @@ let pen = true;
 let apple = false;
 let orange = true;
 let shouldGoToWork = (key && documents && pen) && (apple || orange);
-if (shouldGoToWork == true) {
-    console.log('Супер,вы всё взяли!');
-} else {
-    console.log('Кажется что-то забыли!');
-}
 
 //task 5
 let number = prompt('Введите любое число', '');
