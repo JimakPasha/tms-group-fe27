@@ -31,10 +31,10 @@ let pen = true;
 let apple = false;
 let orange = true;
 let shouldGoToWork = (key && documents && pen) && (apple || orange);
-if (shouldGoToWork == true) {
-    console.log('Супер,вы всё взяли!');
+if (shouldGoToWork) {
+    console.log('Супер, вы всё взяли!');
 } else {
-    console.log('Кажется что-то забыли!');
+    console.log('Кажется что-то забыли');
 }
 
 //task 5
@@ -91,3 +91,4 @@ let stairs = '#';
 for (; stairs.length < 7; stairs += '#') {
     console.log(stairs);
 }
+
