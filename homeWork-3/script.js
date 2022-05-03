@@ -55,3 +55,13 @@ if ((userNumber % 5 == 0) && (userNumber % 3 == 0)) {
     alert('Fiz');
 }
 
+// task 6
+
+let age = prompt(`Введите ваш возраст:`);
+if (age > 18) {
+    alert('Попей пивка');
+} else if (age < 16) {
+    alert('Пей колу');
+} else if (age = 16 && age <= 18) {
+    alert('Можешь выкурить сигаретку, только маме не говори');
+}
