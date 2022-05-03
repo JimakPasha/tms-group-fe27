@@ -43,6 +43,17 @@ if(key && documents && pen (apple || orange)){
 
 
 
+let num = prompt ('введите число');
+
+if ( num % 3 == 0 && num % 5 == 0){
+    alert('FizBuz')
+} else if (num % 5 == 0) {
+    alert('Fiz')
+} else if ( num % 3 == 0) {
+    alert('Buz')
+    } ;
+
+
 
 
 
