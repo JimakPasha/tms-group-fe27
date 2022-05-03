@@ -40,7 +40,6 @@ console.log("Type userName is", typeof(Number(userName)));
   let lengthWords = access + marine + frost + reproach + chopped;
   console.log("Task 5:", lengthWords.length);
 
-
   //Task 6 
   console.log("Task 6:")
   let num = 1;
