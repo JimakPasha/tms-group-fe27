@@ -1,5 +1,4 @@
 
-
 //1
 let x = 20;
 let y = 58;
@@ -23,6 +22,7 @@ let userName = '42';
 
 console.log(typeof String(count));
 console.log(typeof Number(userName));
+console.log(typeof (+userName));
 
 //4
 let d = 1;
@@ -41,14 +41,18 @@ console.log((p.length)+(o.length)+(i.length)+(u.length)+(l.length));
 
 //6
 
-let st = 'Привет';
-let nm = 22;
-let fl = false ;
+let num = 28;
+let text = 'Sergei';
+let bool = false ;
 
-console.log(`Varible:${st}have type:${String}`);
-console.log(`Varible:${nm}have type:${Number}`);
-console.log(`Varible:${fl}have type:${Boolean}`);
+console.log( `Variable: ${num} have type: ${typeof(num)}`);
+console.log( `Variable: ${text} have type: ${typeof(text)}`);
+console.log( `Variable: ${bool} have type: ${typeof(bool)}`);
 
+// 7.
+let userName2 = prompt('Как тебя зовут ?');
+let age = prompt('сколько тебе лет ?');
+console.log(`Уже взрослый, ${userName2} ${age} :)`);
 
 
 //2.1
@@ -69,16 +73,5 @@ let codeWord5 = "?!";
 
 let cipher = (codeWord1[1])+(codeWord2[1])+(codeWord3[1])+(codeWord4[1])+(codeWord5[1]);
 console.log(cipher);
-
-
-
-
-
-// 7.  тут что то не сходится с консолью, значение из промта про не присваивается переменной
-let userName2 = prompt('Как тебя зовут ?');
-let age = prompt('сколько тебе лет ?') 
-console.log(`Уже взрослый, ${userName2} ${age} :)`)
-
-
 
 
