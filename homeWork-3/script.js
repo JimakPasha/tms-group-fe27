@@ -40,7 +40,11 @@ let apple = false;
 let orange = true;
 
 let shouldGoToWork = (key && documents && pen) && (apple || orange);
-console.log(shouldGoToWork);
+if (shouldGoToWork) {
+    console.log('Готов к работе');
+} else {
+    console.log('Что-то забыли');
+}
 
 //5
 let userNumber = prompt('Введите число');
