@@ -63,14 +63,14 @@ if(key && documents && pen && (apple || orange)){
 //5
 {
 
-//let num = prompt('введите число');
-//if ( num % 3 == 0 && num % 5 == 0){
-//    alert('FizBuz')
-//} else if (num % 5 == 0) {
- //   alert('Fiz')
-//} else if ( num % 3 == 0) {
-//    alert('Buz')
-//    } ;
+let num = prompt('введите число');
+if ( num % 3 == 0 && num % 5 == 0){
+    alert('FizBuz')
+} else if (num % 5 == 0) {
+    alert('Fiz')
+} else if ( num % 3 == 0) {
+    alert('Buz')
+    } ;
 
 }
 
@@ -92,6 +92,37 @@ if( age > 18 ){
 }
 
 
+//7
+{
+
+let userChoise = prompt('В какую сторону света хотите отправиться ?');
+switch(userChoise){
+    case 'юг':
+     alert("на юг пойдешь счастье найдешь");
+     break;
+    case 'север':
+     alert("на север пойдешь много денег найдешь");
+     break;
+    case 'запад':
+     alert("на запад пойдешь верного друга найдешь");
+     break;
+    case 'восток':
+     alert("на восток пойдешь разработчиком станешь");
+     break;
+    default:
+     alert("попробуй еще раз");
+}
+
+}
+
+
+//2.1
+{
+
+let userName = prompt('Введите имя и фамилию').toLowerCase();
+alert(`Привет, ${userName}`)
+
+}
 
 
 
