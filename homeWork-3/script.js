@@ -99,3 +99,10 @@ let answer = ((((userNumber2 - +sub) + +add) * +mult) / +div);
 
 alert(`((((${userNumber2} - ${sub}) + ${add}) * ${mult}) / ${div})`);
 
+// adv 3 
+
+let stairs = '#';
+
+for (;stairs.length < 7; stairs += '#') {
+    console.log(stairs);
+}
