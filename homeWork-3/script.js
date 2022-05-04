@@ -1,12 +1,12 @@
 'use strict';
 // Task 1 
-let String = 'true';
-let Boolean = false;
-let Number = 17;
-let Undefined = undefined;
+let string = 'true';
+let boolean = false;
+let number = 17;
+let undef = undefined;
 let obj = null;
 console.log(`Task 1`);
-console.log( typeof(String), typeof(Boolean), typeof(Number), typeof(Undefined), typeof(obj) );
+console.log( typeof(string), typeof(boolean), typeof(number), typeof(undef), typeof(obj) );
  
 // Task 2
 let height = 15;
@@ -14,7 +14,9 @@ let width = 20;
 console.log(`Task 2`);
 if (height > width) {
     console.log (height)
-} else {console.log (width)}
+} else {
+    console.log (width)
+}
 
 // Task 3
 console.log(`Task 3`);
@@ -31,7 +33,7 @@ console.log(`Task 4`);
     let apple = false;
     let orange = true;
 
-    if (key && documents && pen || apple || orange == true){
+    if (key && documents && pen && (apple || orange) == true){
     let shouldGoToWork = true;
     console.log(shouldGoToWork); 
 } else {
@@ -42,21 +44,21 @@ console.log(`Task 4`);
 
 // Task 5
 
-let UserNumber = prompt("укажите число кратное 3, 5 или 15 ", 45);
-if ((UserNumber % 5 && 3) == 0) {
+let userNumber = prompt("укажите число кратное 3, 5 или 15 ", 45);
+if ((userNumber % (5 && 3)) == 0) {
     alert(`FizBuz`)
-} else if ((UserNumber % 3) == 0) {
+} else if ((userNumber % 3) == 0) {
     alert(`Buz`)
-} else if ((UserNumber % 5) == 0) {
+} else if ((userNumber % 5) == 0) {
     alert(`Fiz`)
 }
 
 // Task 6
 
-let UserAge = prompt(`укажите ваш возраст`, 45);
-if (UserAge > 18) {
+let userAge = prompt(`укажите ваш возраст`, 45);
+if (userAge > 18) {
     alert(`Попей пивка`)
-} else if (16 >= UserAge <= 18) {
+} else if (16 >= userAge <= 18) {
     alert(`Можешь выкурить сигаретку, только маме не говори`)
 } else {
     alert(`Пей колу`)
@@ -64,8 +66,8 @@ if (UserAge > 18) {
 
 // Task 7
 
-let UserSide = prompt(`Напишите в какую сторону света хотели бы отправиться`, `юг`);
-switch (UserSide) {
+let userSide = prompt(`Напишите в какую сторону света хотели бы отправиться`, `юг`);
+switch (userSide) {
     case 'юг':
         alert('на юг пойдешь счастье найдешь');
         break;
@@ -83,19 +85,19 @@ switch (UserSide) {
 }
 //ADVANCED level
 // Task 8
-let UserName = prompt("укажите name", 'пОлИнА нАбЕрЕжНаЯ');
-let newUserName = UserName.toLowerCase();
+let userName = prompt("укажите name", 'пОлИнА нАбЕрЕжНаЯ');
+let newUserName = userName.toLowerCase();
 alert(`Привет, ${newUserName.replace(/(^|\s)\S/gi, newUserName => newUserName.toUpperCase())}!`); 
 
 // Task 9
-let UserNumb = prompt("укажите число", 15);
+let userNumb = prompt("укажите число", 15);
 
-let UserMinus = prompt("укажите сколько отнять от предыдущего результата?", 4);
-let UserPlus =  + prompt("укажите сколько прибавить от предыдущего результата?", 4);
-let UserMultiply = prompt("укажите на сколько умножить предыдущий результат?", 4);
-let UserDivide = prompt("укажите на сколько разделить предыдущий результат?", 4);
+let userMinus = prompt("укажите сколько отнять от предыдущего результата?", 4);
+let userPlus =  + prompt("укажите сколько прибавить от предыдущего результата?", 4);
+let userMultiply = prompt("укажите на сколько умножить предыдущий результат?", 4);
+let userDivide = prompt("укажите на сколько разделить предыдущий результат?", 4);
 
-alert ((UserNumb - UserMinus + UserPlus)* UserMultiply / UserDivide);
+alert ((userNumb - userMinus + userPlus)* userMultiply / userDivide);
 
 // Task 10
  let h = 0;
