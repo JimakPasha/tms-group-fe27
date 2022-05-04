@@ -44,8 +44,28 @@
     let n = true;
     console.log(`t: ${t} have type:, ${typeof(t)}; g: ${g} have type:${typeof(g)}; n: ${n} have type: ${typeof(n)}`);
 
-
     // Task 7
     const UserName1 = prompt('укажите имя и возраст');
     console.log(UserName1);
   
+    //### ADVANCED level
+
+    //Task 1
+
+    a = 4;
+    b = 3;
+    a += b;
+    b = a - b;
+    a = a -b;
+    console.log(a);
+    console.log(b);
+
+    // Task 2
+
+    let codeWord1 = "обернись";
+    let codeWord2 = "неужели";
+    let codeWord3 = "огурцы";
+    let codeWord4 = "липкие";
+    let codeWord5 = "?!";
+    let cipher = codeWord1[1] + codeWord2[1] + codeWord3[1] + codeWord4[1] + codeWord5[1];
+    console.log(cipher);
