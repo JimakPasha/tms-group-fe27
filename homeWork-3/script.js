@@ -85,3 +85,17 @@ switch (route) {
     default: 
         console.log('Такого пути нет. Попробуйте ещё раз !');
     }
+
+// adv 2
+
+let userNumber2 = prompt('Введите любое число:');
+
+let sub = prompt('Сколько хотите отнять ?');
+let add = prompt('Сколько хотите прибавить ?');
+let mult = prompt('На сколько хотите умножить ?');
+let div = prompt('На сколько разделить ?');
+
+let answer = ((((userNumber2 - +sub) + +add) * +mult) / +div);
+
+alert(`((((${userNumber2} - ${sub}) + ${add}) * ${mult}) / ${div})`);
+
