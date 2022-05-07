@@ -36,7 +36,7 @@ let apple = false;
 let orange = true;
 
 let shouldGoToWork = ((key && documents && pen) && (apple || orange));
-if (shouldGoToWork == true) {
+if (shouldGoToWork) {
 	console.log('Всё взяли');
 } else {
 	console.log('Что-то забыли?');
@@ -66,22 +66,22 @@ if ((user >= 16) && (user <= 18)) {
 
 //Task7
 
-let userName = 'В какую сторону света Вы бы хотели отправиться?';
+let userName = prompt('В какую сторону света Вы бы хотели отправиться?');
 switch (userName) {
 	case 'Юг':
-		console.log('На юг пойдешь счастье найдешь.');
+		alert('На юг пойдешь счастье найдешь.');
 		break;
 	case 'Север':
-		console.log('На север пойдешь много денег найдешь.');
+		alert('На север пойдешь много денег найдешь.');
 		break;
 	case 'Запад':
-		console.log('На запад пойдешь верного друга найдешь.');
+		alert('На запад пойдешь верного друга найдешь.');
 		break;
 	case 'Восток':
-		console.log('На восток пойдешь разработчиком станешь.');
+		alert('На восток пойдешь разработчиком станешь.');
 		break;
 	default:
-		console.log('Попробуйье, ещё раз.');
+		alert('Попробуйье, ещё раз.');
 }
 
 //ADVANCED level
@@ -101,5 +101,4 @@ for (let x = ''; x.length < 6;) {
 	x += '#';
 	console.log(x);
 }
-
 
