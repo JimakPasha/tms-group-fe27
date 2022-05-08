@@ -1,3 +1,17 @@
+
+
+//Task 2 advanced
+
+
+function chocolate(n, m) {
+  if (n === 0 || m === 0 || n < 0 || m < 0) {
+    return 0 +" Вы ввели неккоректные значения!" ;
+  } else {
+    minFractureChocolate = n * m - 1;
+    return minFractureChocolate;
+  }
+}
+console.log(chocolate(1, 0));
 <p align='right'>< TeachMeSkills /></p>
 <h1 align='center'>Functions</h1>
 
