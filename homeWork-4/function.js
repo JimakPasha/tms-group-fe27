@@ -47,3 +47,57 @@
 // }
 // let result = Math.trunc(changeMoney (currencyLIR, valueKZT));
 // alert(`Your money: ${result}`);
+
+//? Task 3 💻 ???
+// let mail = ' e.a@outlook.com '
+// function trimString(str, valFr, valBy) {
+
+// }
+
+//? Task 4 💻
+//? Это я начал сам делать но что-то не получалось пришлось искать в гугле :( Можете дать небольшую подсказдку чтобы решить по другому.
+// let year = 2021;
+// let getSumNumbers = () => year[0] + year[1] + year[2] + year[3];
+// let result = getSumNumbers;
+// console.log(result);
+//! этот код я нашел в гугле изменил его самую малость 
+// let arr = [2, 0, 2, 1];
+// let getSumNumbers = arr.reduce((a, b) => a + b, 0);
+// let result = getSumNumbers;
+// console.log(result);
+
+//? Task 5 💻
+// !1 метод
+// function getSum (a, b) {
+//     if (a === b) {
+//         console.log(`${a} Since both are same`);
+//     } else {
+//         return (a + b);
+//     }
+// }
+// let result = getSum(-1, 0);
+// console.log(result);
+
+// !2 метод
+//!error
+// let getSum = (a, b) => a + b;
+// const fnNum = (a === b) ? console.log(`${a} Since both are same`) : (a + b);
+// console.log(fnNum(1, 1));
+
+//? Task 6 💻
+//! 1 метод
+// function fooboo (bool, foo, boo) {
+//     if (bool) {
+//         return foo;
+//     } else {
+//         return boo;
+//     }
+// }
+// let result = fooboo(0, `true: foo`, `false: boo`);
+// console.log(result);
+//! 2 метод 
+// let arrFooBoo = (bool, foo, boo) => {
+//     const result = bool ? foo : boo
+//     console.log(result);
+// }
+// arrFooBoo(1, `true: foo`, `false: boo`);
