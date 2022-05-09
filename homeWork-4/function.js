@@ -48,10 +48,9 @@
 // let result = Math.trunc(changeMoney (currencyLIR, valueKZT));
 // alert(`Your money: ${result}`);
 
-//? Task 3 💻 ???
+//? Task 3 💻 ??? можете подсказку дать ?
 // let mail = ' e.a@outlook.com '
 // function trimString(str, valFr, valBy) {
-
 // }
 
 //? Task 4 💻
@@ -101,3 +100,90 @@
 //     console.log(result);
 // }
 // arrFooBoo(1, `true: foo`, `false: boo`);
+
+//? Task 1 👨‍🏫 
+// !1) Я думаю что вы не это спрашивали
+// function getTriangle(a, b, c) {
+//     for (let t = 0 ; t < 20 ; t++) {
+//         if (a + b + c < t) {
+//             console.log('true');
+//         } else {
+//             console.log('false');
+//         }
+//     }
+// }
+// getTriangle(20, 10, 50);
+
+//! 2) можете дать подсказку ? хочу для себя на будущее понят материал)
+// const triangleLength = 20;
+// let triangleSum = (a, b, c) => a + b + c;
+// let result = triangleSum(4, 10, 1) < triangleLength ? console.log('true') : console.log('false');
+
+//? Task 2 👨‍🏫 
+// function getChocolatePiece() {
+// }
+//? Task 3 👨‍🏫 
+//! error
+// let creditCard = +prompt('Введите номер кредитный карты', '4400 0053 7777 7777');
+// creditCard = 1500;
+// function basketPrice() {
+//     for (let i = 0; i <= creditCard; i++) {
+//         function buy(phones, headphones) {
+//             if(phones <= creditCard || headphones <= creditCard) {
+//                 return (phones + headphones);
+//             } else {
+//                 console.log('У тебя не достаточно средств на карте');
+//             }
+//         }
+//     }
+// }
+// buy(560, 100);
+
+//! 2)Берет цены из объекта и суммирует их но почему не работает else? не понял
+// let creditCard = 1500;
+// const NDS = 12.5;
+// let phones = {
+//     brand: ['Apple', 'Samsung', 'Xiaomi', 'OnePlus',],
+//     model: ['iphone11', 'iphone12', 'iphone13'],
+//     price: [450, 650, 799, 1099,],
+// }
+// let headphones = {
+//     brand: ['Apple','JBL','Sony','Marshall'],
+//     model: ['Airpods 2', 'JBL GO', 'WH-1000XM4', 'Airpods Pro'],
+//     price: [99, 199, 599, 799],
+// }
+// // не доконца понял этот момент ?))
+// // let i = 0;
+// // while (i === creditCard) {
+// //     basketPrice()
+// // }
+// function basketPrice(phones, headphones) {
+//     if(phones <= creditCard && headphones <= creditCard) {
+//         return (phones + headphones);
+//     } else {
+//         console.log('У тебя не достаточно денег на карте');
+//     }
+// }
+// let result = basketPrice(phones.price[3], headphones.price[3]);
+// let resultNDS = (result / 100) * NDS + result;
+// console.log(`Сумма с НДС: ${resultNDS}$`);
+
+//! 3)
+// let creditCard = +prompt('Сколько денег у вас на счету в $', '1000');
+// let phone = +prompt('Вы точно хотите купить Iphone XR $', '450');
+// let headphone = +prompt('Вы точно хотите купить Airpods 2 $', '150');
+// const nds = 12;
+// let i = 0
+// while (i <= creditCard) {
+//     i++;
+//     function getBasketPrice (phones, headphones) {
+//         if(phones + headphones <= creditCard) {
+//             return (phones + headphones);
+//         } else {
+//             console.log('У тебя не достаточно средств на карте');
+//         }
+//     }
+// }
+// let result = getBasketPrice(phone, headphone);
+// let resultNds = (result / 100)* nds + result; 
+// alert(resultNds);
