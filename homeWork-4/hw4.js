@@ -10,7 +10,8 @@ function getSum(number) {
 }
 console.log(getSum(100)); // проверка (5050)
 
-// Task 2
+// Task 2 (два решения)
+// без уменьшения суммы кредида за счет выплаченных %
 let interestRateCredit = 17;
 let timeCredit = 5;
 function calcOverpaymentCredit(sumCredit) {
@@ -18,9 +19,7 @@ function calcOverpaymentCredit(sumCredit) {
     return result;
 }
 console.log(calcOverpaymentCredit(100500)); // проверка
-
-// 2-ой способ для рассчета переплаты по процентам с учетом уменьшения
-//  суммы взятой в кредит, за счет ежегодных выплат процентов.
+// с учетом уменьшения суммы кредида за счет выплаченных %
 let interestRateCredit2 = 17;
 let timeCredit2 = 5;
 function calcOverpaymentCredit2(sumCredit) {
@@ -43,7 +42,8 @@ function trimString(string, x, y) {
 }
 console.log(trimString ('JavaScript', 1, 4))
 
-// Task 4
+// Task 4 (два решения)
+// через преобразование в массив
 function getSumNumbers(number) {
     number = number.toString();
     let numberStr = number.split('');
@@ -55,6 +55,18 @@ function getSumNumbers(number) {
     return result;
 }
 console.log(getSumNumbers(2021)); // 5
+// через сумму остатков от деления 
+function getSumNumbers2(number) {
+    let result = 0;
+    while (number > 0) {
+        let surplus = (number % 10);
+        result = result + surplus;
+        number = Math.floor(number/ 10);
+    }
+    return result;
+}
+console.log(getSumNumbers2(2021)); // 5
+
 
 // Task 5
 function getSum(a, b) {
@@ -76,4 +88,43 @@ function getSum(a, b) {
     }
 }
 console.log(getSum(-2, -1));
+
+// Task 6 (не совсем понял условие)
+function fooboo(bool, foo, boo) {
+    foo = foo1;
+    boo = boo1;
+   (bool) ? foo() : boo();
+}
+function foo1() {
+   console.log('foo');
+}
+function boo1() {
+   console.log('boo');
+}
+fooboo(true);
+
+// Advanced level
+// Task 1
+function checkTriangle(a, b, c) {
+    return  (a + b > c && a + c > b && b + c > a) ? true : false;
+}
+console.log(checkTriangle(5, 3, 4));
+
+// Task 2
+function showDivisionChocolate(n, m) {
+    let result;
+    if ((n <= 0) || (m <= 0)) {
+        return result = 0;
+    } else if ((n === 1) || (m === 1)) {
+        return (n > m) ? result = n - 1 : result = m - 1;
+    } else if ((n <  m) || (n === m) || (n > m)) {
+        return result = ((m - 1) * n) + (n - 1);
+    } else {
+        return result = 0;
+    }
+}
+console.log(showDivisionChocolate(3, 1)); // 2
+
+// Task 3
+// пока не cделал
 
