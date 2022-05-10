@@ -1,21 +1,22 @@
 //?  Task 1 💻
-//! 1) Function Declartion
-// let result = getSum(5, 10);
-// console.log(result);
-// function getSum(a, b) {
-//     return (a + b);
+//! error
+// function getSum(num) {
+//     for (let i = 1; i <= num; i++) {
+//         num += i;
+//     }
 // }
-
-//! 2) Fucntion Expression 
-// let fnGetSum = function(a, b) {
-//     return (a + b);
-// }
-// let result = fnGetSum(10, 15);
+// let result = getSum(100);
 // console.log(result);
 
-//! 3) Arrow Function
-// let arrowFnSum = (a, b) => a + b;
-// let result = arrowFnSum(12, 11);
+// //! let sum и return sum пришлось посмотреть в гугле 
+// function getSum(num) {
+//     let sum = 0
+//     for (let i = 1; i <= num; i++) {
+//         sum += i;
+//     }
+//     return sum
+// }
+// let result = getSum(100);
 // console.log(result);
 
 //?  Task 2 💻 
@@ -49,10 +50,15 @@
 // alert(`Your money: ${result}`);
 
 //? Task 3 💻 ??? можете подсказку дать ?
-// let mail = ' e.a@outlook.com '
-// function trimString(str, valFr, valBy) {
+// function trimString(str, from, to) {
+//     if (str.length <= from) {
+//         return str.slice(0, from);
+//     } else if (str.length >= to) {
+//         return str.slice(0, to);
+//     }
 // }
-
+// let result = trimString('ARROW', 0, 3);
+// console.log(result);
 //? Task 4 💻
 //? Это я начал сам делать но что-то не получалось пришлось искать в гугле :( Можете дать небольшую подсказдку чтобы решить по другому.
 // let year = 2021;
@@ -64,7 +70,6 @@
 // let getSumNumbers = arr.reduce((a, b) => a + b, 0);
 // let result = getSumNumbers;
 // console.log(result);
-
 //? Task 5 💻
 // !1 метод
 // function getSum (a, b) {
@@ -102,26 +107,33 @@
 // arrFooBoo(1, `true: foo`, `false: boo`);
 
 //? Task 1 👨‍🏫 
-// !1) Я думаю что вы не это спрашивали
 // function getTriangle(a, b, c) {
-//     for (let t = 0 ; t < 20 ; t++) {
-//         if (a + b + c < t) {
-//             console.log('true');
+//     const triangleLength = 20;
+//         if (a + b + c < triangleLength) {
+//             return (a + b + c + ' triangle true');
 //         } else {
-//             console.log('false');
+//             console.log(`triangle false`);
 //         }
-//     }
 // }
-// getTriangle(20, 10, 50);
+// let result = getTriangle(5, 10, 4);
+// console.log(result);
 
-//! 2) можете дать подсказку ? хочу для себя на будущее понят материал)
+//! 2)
 // const triangleLength = 20;
 // let triangleSum = (a, b, c) => a + b + c;
 // let result = triangleSum(4, 10, 1) < triangleLength ? console.log('true') : console.log('false');
 
 //? Task 2 👨‍🏫 
-// function getChocolatePiece() {
+// function getChocolatePiece(h, w) {
+//     if (h >= 1 && w >= 1) {
+//         return (h * w) - 1;
+//     } else {
+//         console.log('False');
+//     }
 // }
+// let result = getChocolatePiece(3, 1);
+// console.log(`Нужно: ${result} надлома`);
+
 //? Task 3 👨‍🏫 
 //! error
 // let creditCard = +prompt('Введите номер кредитный карты', '4400 0053 7777 7777');
