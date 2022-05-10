@@ -13,24 +13,23 @@ let n = prompt('n?', '');
 alert(getSum(x,n));
 
 //task 2
-function getCredit(needMoney) {
+function getOverpayment(needMoney) {
     let percent = 17;
     let year = 5;
-    let resultOfCredit = needMoney * percent / 100 * year;
-    return resultOfCredit;
+    return needMoney * percent / 100 * year;
 }
-let needMoney = prompt('Какую сумму кредита вы хотите взять?', '');
-alert(`Ваша переплата составит ${getCredit(needMoney)} `);
+let useMoney = prompt('Какую сумму кредита вы хотите взять?', '');
+alert(`Ваша переплата составит ${getOverpayment(useMoney)} `);
 
 //task 3
 function trimString(string,from,to) {
     let trim = string.slice(from,to);
     return trim;
 }
-let string = prompt('Введите слово', '');
-let from = prompt('С какого символа начать?', '');
-let to = prompt('Каким символом закончить?', '');
-alert(trimString(string,from,to));
+let word = prompt('Введите слово', '');
+let cutFrom = prompt('С какого символа начать?', '');
+let cutTo = prompt('Каким символом закончить?', '');
+alert(trimString(word, cutFrom, cutTo));
 
 //task 4
 function getSumNumbers(number) {
@@ -41,8 +40,8 @@ function getSumNumbers(number) {
     }
     return sumOfNumber;
 }
-let number = prompt('Введите число', '');
-alert(getSumNumbers(number));
+let askNumber = prompt('Введите число', '');
+alert(getSumNumbers(askNumber));
       
 //task 5
 function getSum(y,z) {
@@ -53,9 +52,9 @@ function getSum(y,z) {
     }
     return sumOfGetSum;
 }
-let y = prompt('Введите первое число', '');
-let z = prompt('Введите второе число', '');
-alert(getSum(y,z));
+let firstNumber = prompt('Введите первое число', '');
+let secondNumber = prompt('Введите второе число', '');
+alert(getSum(firstNumber, secondNumber));
 
 //task 6
 let foo = function() {
@@ -84,7 +83,6 @@ function getAbilityBuildTriangle(a, b, c) {
     } else {
         console.log(false);
     }
-    return a, b, c;
 }
 getAbilityBuildTriangle(2, 2, 3);
 
@@ -92,14 +90,12 @@ getAbilityBuildTriangle(2, 2, 3);
 function getPartChocolate(n, m) {
     let part = 0;
     if (n <= 0 || m <= 0) {
-        part == 0;
+       console.log(0);
     } else {
-        part = n * m - 1;
+       console.log(part = n * m - 1);
     }
-    console.log(part);
-    return part;
 }
-getPartChocolate(3, 1);
+getPartChocolate(3, 5);
 
 //task 3
 const tax = 12;
