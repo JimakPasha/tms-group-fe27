@@ -30,19 +30,18 @@ console.log("Переплата равна: ", credit(1000), "рублей!");
  console.log(trimString('I love my girlfriend', 1, 15));
 
 
- //Task 4
+//  //Task 4
 
  function getSumNumbers(number) {
   let a;
-  a = number.split('');
-  console.log(a);
+  a = (number.toString()).split('');
   let b = 0;
     for (let i = 0; i < a.length; i++) {
       b = b + Number(a[i]);
     }
     console.log(b);
  }
- getSumNumbers('353');
+ getSumNumbers(353);
 
  //Task 5
                      
