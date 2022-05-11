@@ -126,5 +126,28 @@ function showDivisionChocolate(n, m) {
 console.log(showDivisionChocolate(3, 1)); // 2
 
 // Task 3
-// пока не cделал
 
+function calcCostPhone() {
+    let balanceCard = +prompt('введите остаток средств на вашем счете!','');
+    let costPhone = +prompt('введите стоимость телефона','');
+    let costAccessory = +prompt('введите стоимость аксессуара','');
+    let colBuy = 0;
+    let sumBuy = costPhone + costAccessory + taxRate();
+    console.log(sumBuy);
+    if (balanceCard < sumBuy) {
+        return alert('У Вас не достаточно средств');
+    } else {
+        for (let i = 1; balanceCard >= sumBuy; i++) {
+            sumBuy *= i;
+            balanceCard -= sumBuy;
+            colBuy += i;
+        }
+        alert(`Стоимость покупки: ${sumBuy.toFixed(2)} BYN`);
+        return alert(`Вы купили ${colBuy} телефонов и аксессуаров`);
+    }
+    function taxRate() {
+        let procent = +prompt('введите процент налога','');
+       return ((costPhone + costAccessory) / 100) * procent;
+    }
+}
+calcCostPhone();
