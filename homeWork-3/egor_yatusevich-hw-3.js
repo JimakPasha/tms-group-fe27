@@ -1,4 +1,3 @@
-   'use strict'
 
    //Task 1
    let a = 'true';
@@ -122,3 +121,4 @@ for (i = 0; i < 6; i++) {
     console.log(hash);
 }
 
+getSum(100);
