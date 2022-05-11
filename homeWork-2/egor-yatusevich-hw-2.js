@@ -20,8 +20,10 @@ console.log("Result Task 2: ", myAgeInSeconds, "seconds in my life!");
 console.log('Task 3:')
 let count = 42;
 let userName = '42';
+console.log("Type count is", typeof(count.toString()));
 console.log("Type count is", typeof(String(count)));
 console.log("Type userName is", typeof(+userName));
+console.log("Type userName is", typeof(Number(userName)));
 
 //Task 4
   let a = 1;
@@ -37,6 +39,15 @@ console.log("Type userName is", typeof(+userName));
   let chopped = "рубило";
   let lengthWords = access + marine + frost + reproach + chopped;
   console.log("Task 5:", lengthWords.length);
+
+  //Task 6 
+  console.log("Task 6:")
+  let num = 1;
+  let text = "Egor";
+  let bool = false;
+  console.log( `Variable: ${num} have type: ${typeof(num)}`);
+  console.log( `Variable: ${text} have type: ${typeof(text)}`);
+  console.log( `Variable: ${bool} have type: ${typeof(bool)}`);
 
   //Task 7
   const user = prompt("Как вас зовут?");
