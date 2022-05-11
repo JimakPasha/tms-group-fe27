@@ -63,16 +63,14 @@ function getSum(a, b) {
     // Task 6
     function fooboo(bul, foo, boo) {
         function foo() {
-            return 'foo';
+            console.log(`foo`);
         } function boo() {
-            return 'boo';
-         } bul = !!bul;
-            foo = foo();
-            boo = boo();
+            console.log(`boo`);
+         } bul = !!bul;         
         if(bul) {
-            console.log(foo) 
+            foo(); 
         } else {
-            console.log(boo)
+            boo();
         } 
     } fooboo(true)
     
