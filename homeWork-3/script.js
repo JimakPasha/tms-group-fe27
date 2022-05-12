@@ -19,7 +19,7 @@ if (height > width) {
 //task 3
 let a = 1;
 for (; a <= 20; ++a) {
-    if (a % 3 == 0) {
+    if (a % 3 === 0) {
         console.log(a);
     }
 }
@@ -39,11 +39,11 @@ if (shouldGoToWork) {
 
 //task 5
 let number = prompt('Введите любое число', '');
-if ((number % 3 == 0) && (number % 5 == 0)) {
+if ((number % 3 === 0) && (number % 5 === 0)) {
     alert('FizBuz');
-} else if (number % 5 == 0) {
+} else if (number % 5 === 0) {
     alert('Fiz');
-} else if (number % 3 == 0) {
+} else if (number % 3 === 0) {
     alert('Buz');
 }
 
