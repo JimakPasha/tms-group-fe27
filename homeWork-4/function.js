@@ -1,13 +1,4 @@
 //?  Task 1 💻
-//! error
-// function getSum(num) {
-//     for (let i = 1; i <= num; i++) {
-//         num += i;
-//     }
-// }
-// let result = getSum(100);
-// console.log(result);
-
 // //! let sum и return sum пришлось посмотреть в гугле 
 // function getSum(num) {
 //     let sum = 0
@@ -38,17 +29,6 @@
 // alert(`Итого: ${result} руб`);
 // console.log(`ежемесячные платеж: ${Math.trunc(monthPay)}руб`);
 
-//! Вспомнить то что делали на лайве)
-// let currencyEUR = 490;
-// let currencyLIR = 35;
-// let currencyUSD = 440;
-// let valueKZT = 30000;
-// function changeMoney(currencyUSD, valueKZT) {
-//     return (valueKZT / currencyUSD);
-// }
-// let result = Math.trunc(changeMoney (currencyLIR, valueKZT));
-// alert(`Your money: ${result}`);
-
 //? Task 3 💻 ??? можете подсказку дать ?
 // function trimString(str, from, to) {
 //     if (str.length <= from) {
@@ -71,7 +51,6 @@
 // let result = getSumNumbers;
 // console.log(result);
 //? Task 5 💻
-// !1 метод
 // function getSum (a, b) {
 //     if (a === b) {
 //         console.log(`${a} Since both are same`);
@@ -81,12 +60,6 @@
 // }
 // let result = getSum(-1, 0);
 // console.log(result);
-
-// !2 метод
-//!error
-// let getSum = (a, b) => a + b;
-// const fnNum = (a === b) ? console.log(`${a} Since both are same`) : (a + b);
-// console.log(fnNum(1, 1));
 
 //? Task 6 💻
 //! 1 метод
@@ -135,23 +108,7 @@
 // console.log(`Нужно: ${result} надлома`);
 
 //? Task 3 👨‍🏫 
-//! error
-// let creditCard = +prompt('Введите номер кредитный карты', '4400 0053 7777 7777');
-// creditCard = 1500;
-// function basketPrice() {
-//     for (let i = 0; i <= creditCard; i++) {
-//         function buy(phones, headphones) {
-//             if(phones <= creditCard || headphones <= creditCard) {
-//                 return (phones + headphones);
-//             } else {
-//                 console.log('У тебя не достаточно средств на карте');
-//             }
-//         }
-//     }
-// }
-// buy(560, 100);
-
-//! 2)Берет цены из объекта и суммирует их но почему не работает else? не понял
+//! 1)Берет цены из объекта и суммирует их но почему не работает else? не понял
 // let creditCard = 1500;
 // const NDS = 12.5;
 // let phones = {
