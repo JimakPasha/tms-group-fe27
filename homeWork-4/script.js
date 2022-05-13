@@ -62,15 +62,25 @@ getSum(2, 2);
 
 /* Task 6************************/
 
-function fooboo(fb) {
-   if (fb == true) {
-      console.log('foo');
+function fooboo(bool, foo, boo) {
+   if (bool) {
+      foo();
    } else {
-      console.log('boo');
+      boo();
    }
 }
 
-fooboo(false);
+let = true;
+
+let foo = function () {
+   console.log("foo");
+};
+
+let boo = function () {
+   console.log("boo");
+};
+
+fooboo(false, foo, boo);
 
 /* Task 1.1************************/
 
@@ -98,15 +108,40 @@ getSumma(1, 6);
 
 /* Task 1.3************************/
 
-/*Решение из интернета, у самого не получилось(((*/
+//С этим решением понятнее
+
+const fee = 0.20;
+const pricePhone = 1250;
+const accesoriesPhone = 120;
+let balance = 2000;// let balance = prompt("Сколько у вас денег?")
+
+function buyPhone(balance, accesoriesPhone, pricePhone, fee) {
+   fee = (pricePhone + accesoriesPhone) * fee;//Сумма налога с огруглением до 2-ого знака(.toFixed(2))
+   pricePhone = pricePhone + accesoriesPhone + fee;//Стоимость телефона с огруглением до 2-ого знака(.toFixed(2))
+   console.log("Сумма налога " + fee.toFixed(2) + "$");// alert("Сумма налога " + fee.toFixed(2) + "$");
+   console.log("Общая сумма " + pricePhone.toFixed(2) + "$");// alert("Общая сумма " + pricePhone.toFixed(2) + '$');
+   if (balance >= pricePhone) {// Условие для покупки телефона с нашим балансом
+      for (i = 0; pricePhone <= balance; i++) {
+         balance -= pricePhone;// balance = balance - pricePhone
+      }
+      console.log("Сколько телефонов вы купили: " + i);// alert("Сколько телефонов вы купили: " + i);
+   } else {
+      console.log("Надо еще деньги((");// alert("Надо еще деньги((");
+   }
+}
+
+buyPhone(balance, accesoriesPhone, pricePhone, fee);
+
+
+/*Решение из интернета, у самого не получилось(((
 
 const SPENDING_THRESHOLD = 200;
 const TAX_RATE = 0.08;
 const PHONE_PRICE = 99.99;
 const ACCESSORY_PRICE = 9.99;
 
-var bank_balance = 303.91;
-var amount = 0;
+let bank_balance = 303.91;
+let amount = 0;
 
 function calculateTax(amount) {
    return amount * TAX_RATE;
@@ -141,7 +176,7 @@ if (amount > bank_balance) {
       "Вы не можете позволить себе эту покупку. :("
    );
 }
-// Вы не можете позволить себе эту покупку. :(
+// Вы не можете позволить себе эту покупку. :(*/
 
 
 
