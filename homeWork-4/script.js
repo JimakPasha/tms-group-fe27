@@ -4,7 +4,7 @@
 
 function getSum(x) {
     let b = 0;
-    for(let i = 0; i<=x; i++) {
+    for(let i = 0; i <= x; i++) {
         b += i;
     } console.log(b);
 }
@@ -22,7 +22,7 @@ console.log(result);
 
 function trimString(text, a, b) {
     let text2 = text[a];
-for(let i = a + 1; i<=b; i++) {
+for(let i = a + 1; i <= b; i++) {
     text2 += text[i];
 } return text2
 }
@@ -47,12 +47,12 @@ function getSum(a, b) {
             x = a;
         } else if(a < b){
         x = a;
-        for(let i = a + 1; i<=b; i++) {
+        for(let i = a + 1; i <= b; i++) {
         x += i;
         }
         } else {
         x = b;
-        for(let i = b + 1; i<=a; i++) {
+        for(let i = b + 1; i <= a; i++) {
         x += i;
         }
         } return x
@@ -62,17 +62,20 @@ function getSum(a, b) {
     
     // Task 6
     function fooboo(bul, foo, boo) {
-        function foo() {
-            console.log(`foo`);
-        } function boo() {
-            console.log(`boo`);
-         } bul = !!bul;         
+         bul = !!bul;         
         if(bul) {
             foo(); 
         } else {
             boo();
         } 
-    } fooboo(true)
+    }
+    function foo() {
+        console.log(`foo`);
+    } 
+    function boo() {
+        console.log(`boo`);
+     } 
+    fooboo(true, foo, boo);
     
   
     //### ADVANCED level
