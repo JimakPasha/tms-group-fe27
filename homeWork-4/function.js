@@ -1,16 +1,16 @@
 //?  Task 1 💻
-// //! let sum и return sum пришлось посмотреть в гугле 
 // function getSum(num) {
 //     let sum = 0
 //     for (let i = 1; i <= num; i++) {
 //         sum += i;
 //     }
-//     return sum
+//     return sum;
 // }
 // let result = getSum(100);
 // console.log(result);
 
 //?  Task 2 💻 
+//! 1 method
 // let youngFamily = confirm('Вы являетесь молодое семьей');
 // const creditPercen = 17;
 // const youngFamilyCreditPercen = 4.5; 
@@ -29,7 +29,26 @@
 // alert(`Итого: ${result} руб`);
 // console.log(`ежемесячные платеж: ${Math.trunc(monthPay)}руб`);
 
+//! 2 method
+// function getCredit(sumCredit) {
+//     const percent = 17;
+//     let year = 5;
+//     return (sumCredit * year * percent) / 100; 
+// }
+// let result = getCredit(1000);
+// console.log(`Ваша переплата: ${result} rub`);
+
+//! 3 method
+// let arrGetCredit = (sumCredit) => {
+//     let year = 5;
+//     const percent = 17;
+//     return (sumCredit * year * percent) / 100
+// }
+// let result = arrGetCredit(1000);
+// console.log(result);
+
 //? Task 3 💻 ??? можете подсказку дать ?
+//! 1 method
 // function trimString(str, from, to) {
 //     if (str.length <= from) {
 //         return str.slice(0, from);
@@ -39,18 +58,24 @@
 // }
 // let result = trimString('ARROW', 0, 3);
 // console.log(result);
+
+//! 2 method
+// function trimString(str, from, to) {
+//     return str.slice(from, to)
+// }
+// console.log(trimString('I love JS', 0, 7));
 //? Task 4 💻
-//? Это я начал сам делать но что-то не получалось пришлось искать в гугле :( Можете дать небольшую подсказдку чтобы решить по другому.
-// let year = 2021;
-// let getSumNumbers = () => year[0] + year[1] + year[2] + year[3];
-// let result = getSumNumbers;
-// console.log(result);
-//! этот код я нашел в гугле изменил его самую малость 
-// let arr = [2, 0, 2, 1];
-// let getSumNumbers = arr.reduce((a, b) => a + b, 0);
-// let result = getSumNumbers;
-// console.log(result);
+// function getSum(num) {
+//     let result = String(num);
+//     let sumNum = 0;
+//     for(let i = 0; i < result.length; i++) {
+//         sumNum += +result[i];
+//     }
+//     return sumNum;
+// }
+// console.log(getSum(130));
 //? Task 5 💻
+//!1 method
 // function getSum (a, b) {
 //     if (a === b) {
 //         console.log(`${a} Since both are same`);
@@ -58,20 +83,36 @@
 //         return (a + b);
 //     }
 // }
-// let result = getSum(-1, 0);
+// let result = getSum(3, 6);
 // console.log(result);
+
+//!2 method
+// function getSum(x, y) {
+//     let sumNum = 0;
+//     for (let i = x; i <= y; i++) {
+//         sumNum += +i;
+//     }
+//     return sumNum;
+// }
+// console.log(getSum(5, 2));
 
 //? Task 6 💻
 //! 1 метод
 // function fooboo (bool, foo, boo) {
 //     if (bool) {
-//         return foo;
+//         foo();
 //     } else {
-//         return boo;
+//         boo();
 //     }
 // }
-// let result = fooboo(0, `true: foo`, `false: boo`);
-// console.log(result);
+// let bool = true;
+// let foo = function () {
+//     console.log('foo');
+// }
+// let boo = function () {
+//     console.log('boo');
+// }
+// fooboo(bool, foo, boo);
 //! 2 метод 
 // let arrFooBoo = (bool, foo, boo) => {
 //     const result = bool ? foo : boo
@@ -80,15 +121,15 @@
 // arrFooBoo(1, `true: foo`, `false: boo`);
 
 //? Task 1 👨‍🏫 
+//! 1)
 // function getTriangle(a, b, c) {
-//     const triangleLength = 20;
-//         if (a + b + c < triangleLength) {
-//             return (a + b + c + ' triangle true');
+//         if (a <= b + c && b <= a + c && c <= a + b) {
+//             return true + ' Triangle: true';
 //         } else {
-//             console.log(`triangle false`);
+//             return false + ' Triangle: false'
 //         }
 // }
-// let result = getTriangle(5, 10, 4);
+// let result = getTriangle(10, 1, 9);
 // console.log(result);
 
 //! 2)
