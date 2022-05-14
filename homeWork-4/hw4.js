@@ -12,17 +12,17 @@ console.log(getSum(100)); // проверка (5050)
 
 // Task 2 (два решения)
 // без уменьшения суммы кредида за счет выплаченных %
-let interestRateCredit = 17;
-let timeCredit = 5;
 function calcOverpaymentCredit(sumCredit) {
+    let interestRateCredit = 17;
+    let timeCredit = 5;
     let result = (sumCredit / 100) * interestRateCredit * timeCredit;
     return result;
 }
 console.log(calcOverpaymentCredit(100500)); // проверка
 // с учетом уменьшения суммы кредида за счет выплаченных %
-let interestRateCredit2 = 17;
-let timeCredit2 = 5;
 function calcOverpaymentCredit2(sumCredit) {
+    let interestRateCredit2 = 17;
+    let timeCredit2 = 5;
     let overpaymentOfYear;
     let result = 0;
     for (let i = 1; i <= timeCredit2; i++) {
@@ -91,17 +91,16 @@ console.log(getSum(-2, -1));
 
 // Task 6 (не совсем понял условие)
 function fooboo(bool, foo, boo) {
-    foo = foo1;
-    boo = boo1;
    (bool) ? foo() : boo();
 }
-function foo1() {
+let bool = true;
+let foo = function () {
    console.log('foo');
-}
-function boo1() {
+};
+let boo = function () {
    console.log('boo');
-}
-fooboo(true);
+};
+fooboo(bool, foo, boo);
 
 // Advanced level
 // Task 1
