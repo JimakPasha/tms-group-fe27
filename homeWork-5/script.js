@@ -47,7 +47,7 @@ let salaries = {
     andrey: 500,
     sveta: 413,
     anton: 987,
-    andrey: 664,
+    inga: 664,
     alexandra: 199,
 }
 let avergeSalary = 0;
