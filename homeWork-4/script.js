@@ -14,7 +14,7 @@ alert(getSum(100));
 
 // #### Task 2 💻
 
-function getOverpayment(Money) {
+function getOverpayment(money) {
     let percent = 17;
     let year = 5;
     return Money * percent / 100 * year;
@@ -24,8 +24,8 @@ alert(`Ваша переплата  ${getOverpayment(result)} `);
 
 // #### Task 3 💻
 // были небольшие проблемы с  понимаем задания.
-function trimString(string,from,to) {
-    let trim = string.slice(from,to);
+function trimString(string, from, to) {
+    let trim = string.slice(from, to);
     return trim;
 }
 let word = prompt('Введите слово', '');
@@ -36,7 +36,8 @@ alert(trimString(word, cutFrom, cutTo));
 // #### Task 4 💻
 
 function getSumNumber(num) {
-    let sum = 0, tmp;
+    let sum = 0;
+    let tmp;
     while (num) {
         tmp = num % 10;
         num = (num - tmp) / 10;
@@ -61,7 +62,7 @@ function getSum(a, b) {
         result = b;
         for (let i = b + 1; i <= a; i++) {
             result += i;
-        } 
+        }
         return result;
     } else {
         return result = a;
@@ -71,15 +72,22 @@ console.log(getSum(10, -8));
 
 // #### Task 6 💻
 
- function fooboo (bool, foo, boo) {
-     if (bool) {
-         return foo;
-     } else {
-         return boo;
-     }
- }
-let resultFooboo = fooboo(0, `true: foo`, `false: boo`);
-console.log(resultFooboo);
+function fooboo(bool, foo, boo) {
+    if (bool) {
+        return foo;
+    } else {
+        return boo;
+    }
+}
+let bool = true;
+let foo = function () {
+    console.log('foo');
+}
+let boo = function () {
+    console.log('boo');
+}
+fooboo(bool, foo, boo);
+
 
 
 // ### ADVANCED level
@@ -104,14 +112,39 @@ trangel(arr);
 
 // #### Task 2 👨‍🏫
 
- function getChocolateBar(x, y) {
-     if (x >= 1 && y >= 1) {
-         return (x * y) - 1;
-     } else {
-         console.log('False');
-     }
- }
- let chocolateResult = getChocolateBar(6, 2);
- console.log(`Нужно: ${chocolateResult} надломов`);
+function getChocolateBar(x, y) {
+    if (x >= 1 && y >= 1) {
+        return (x * y) - 1;
+    } else {
+        console.log('False');
+    }
+}
+let chocolateResult = getChocolateBar(6, 2);
+console.log(`Нужно: ${chocolateResult} надломов`);
 
 // #### Task 3 👨‍🏫 
+
+function calcCostPhone() {
+    let balanceCard = +prompt('введите остаток средств на вашем счете!','');
+    let costPhone = +prompt('введите стоимость телефона','');
+    let costAccessory = +prompt('введите стоимость аксессуара','');
+    let colBuy = 0;
+    let sumBuy = costPhone + costAccessory + taxRate();
+    console.log(sumBuy);
+    if (balanceCard < sumBuy) {
+        return alert('У Вас не достаточно средств');
+    } else {
+        for (let i = 1; balanceCard >= sumBuy; i++) {
+            sumBuy *= i;
+            balanceCard -= sumBuy;
+            colBuy += i;
+        }
+        alert(`Стоимость покупки: ${sumBuy.toFixed(2)} BYN`);
+        return alert(`Вы купили ${colBuy} телефонов и аксессуаров`);
+    }
+    function taxRate() {
+        let procent = +prompt('введите процент налога','');
+       return ((costPhone + costAccessory) / 100) * procent;
+    }
+}
+calcCostPhone();
