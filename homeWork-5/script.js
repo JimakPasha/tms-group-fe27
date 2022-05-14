@@ -90,6 +90,20 @@ let score = {
 let firstComand = prompt('Сколько очков у первой команды?', '');
 let secondComand = prompt('Сколько очков у второй команды?', '');
 alert(`Счёт ${score[firstComand]} : ${score[secondComand]}`);
+//or
+let scoreMatch = {
+    1: 'один',
+    2: 'два',
+    3: 'три',
+    4: 'четыре',
+    5: 'пять',
+    6: 'шесть',
+    7: 'семь',
+    8: 'восемь',
+    9: 'девять',
+};
+let footbolScore = prompt('Какой счёт?', '2 : 5');
+alert(`Счёт ${scoreMatch[footbolScore[0]]} : ${scoreMatch[footbolScore[0]]}`);
 
 //task 2
 let student1 = {
