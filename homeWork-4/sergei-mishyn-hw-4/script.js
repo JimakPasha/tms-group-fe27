@@ -5,12 +5,12 @@
 function getSum(sum) {
     for (let i = 1; i < 100; i++) {
         sum = sum + i;
+        
     }
     console.log(sum)
 }
 getSum(100)
-// let myFn = getSum(prompt('Введите число'));
-// alert(myFn);  // почему тут в консоле в браузере выбивает undefined ?
+
 
 }
 
@@ -40,15 +40,15 @@ trimString('Привет',1,4);
 
 {
 
-function countDigits(num) {
-    for(i = 0; num >= 1; i++) {
-       num /= 10;
+function getSumNumbers(number) {
+    let result = String(number);
+    let sum = 0;
+    for (let i = 0; i < result.length; i++) {
+         sum = sum + +result[i];
+        }
+        console.log(sum);
     }
-    console.log(i)
- }
-
-countDigits(5555)
-
+    getSumNumbers(444);
 
 }
 // task 5
@@ -77,3 +77,55 @@ function getSum(a, b) {
 console.log(getSum(1, 1));
 
 }
+// Tast 6
+{
+
+function fooboo(bool, foo, boo) {
+    if (bool) {
+        foo();
+    } else {
+        boo();
+    }
+    }
+let bool = true;
+let foo = function() {
+    console.log("foo")
+};
+let boo = function() {
+    console.log("boo")
+};
+
+fooboo(bool, foo, boo);
+
+}
+
+// Task 2.1
+{
+function triangle(a, b, c) {
+     if (a <= b + c && b <= a + c && c <= b + a) {
+        return 'True'
+     }  else {
+        return 'False'
+     }
+
+}
+console.log(triangle(2, 3, 3));
+    
+}
+
+// Task 2.2
+
+{
+
+function getPartChocolate(a, b) {
+    let part = 0;
+    if(a <= 0 || b <= 0) {
+        console.log(0)
+    } else {
+        console.log(part = a * b - 1)
+    }
+}
+getPartChocolate(2,2)
+}
+
+// Task 2.3
