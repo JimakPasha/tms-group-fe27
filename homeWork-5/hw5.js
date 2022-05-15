@@ -154,7 +154,7 @@ console.log(student1 === student2); // true
 
 
 // Task 3
-function anim(kindAnimal, infoAnimal) {
+function checkAnimal(kindAnimal, infoAnimal) {
     const animals = {
         cat: {
            name: 'Енчик',
@@ -178,6 +178,31 @@ function anim(kindAnimal, infoAnimal) {
     }
     return console.log(`${kindAnimal} -  нет здесть таких животных!`);
 }
-anim('bird', 'name'); // bird нет здесть таких животных!
-anim('cat', 'name'); // У cat name: Енчик
-anim('cat', 'weight'); // weight - не указан у cat!
+checkAnimal('bird', 'name'); // bird нет здесть таких животных!
+checkAnimal('cat', 'name'); // У cat name: Енчик
+checkAnimal('cat', 'weight'); // weight - не указан у cat!
+
+// or
+function checkAnimal2(kindAnimal, infoAnimal) {
+    const animals = {
+        cat: {
+           name: 'Енчик',
+           age: 3,
+        },
+        dog: {
+           name: 'Орео',
+           age: 2,
+        }
+    }
+     
+    if (animals[kindAnimal] !== undefined) {
+        if (animals[kindAnimal][infoAnimal] !== undefined) {
+            return console.log(`У ${kindAnimal} ${infoAnimal}: ${animals[kindAnimal][infoAnimal]}`);
+        }
+        return console.log(`${infoAnimal} - не указан у ${kindAnimal}!`);
+    }
+    return console.log(`${kindAnimal} -  нет здесть таких животных!`);
+}
+checkAnimal2('bird', 'name'); // bird нет здесть таких животных!
+checkAnimal2('cat', 'name'); // У cat name: Енчик
+checkAnimal2('cat', 'weight'); // weight - не указан у cat!
