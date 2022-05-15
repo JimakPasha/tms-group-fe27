@@ -73,62 +73,107 @@
 
 // Advanced Level
 //Task 1
-const goalMax = 9;
-let goal = 'GOAL';
-let yellowCard = 'Yellow Card';
-let redCard = 'Red Card';
-let liverpool = {
-    GK: 'Alisson',
-    RB: 'Trent',
-    CB: 'Matip',
-    CB: 'VVD',
-    LB: 'Robertson',
-    CAP: 'Fabihno',
-    CAP: 'Thiago',
-    CAP: 'Henderson',
-    LF: 'Dias',
-    ST: 'Mane',
-    RW: 'Salah'
-}
-let realmadrid = {
-    GK: 'Courtois',
-    RB: 'Carvajal',
-    CB: 'Militao',
-    CB: 'Nacho',
-    LB: 'Mendy',
-    CAP: 'Casemiro',
-    CAP: 'Kroos',
-    CAP: 'Modric',
-    LF: 'jr Vinisius',
-    ST: 'Benzema',
-    RW: 'Valverde'
-}
-let liverpoolPlayerGoal = {
-    ['12 min']: liverpool.RW + ` ${goal}`,
-    ['32 min']: liverpool.ST + ` ${goal}`,
-    ['45 min']: liverpool.RB + ` ${goal}`,
-    ['54 min']: liverpool.LF + ` ${goal}`,
-}
-let realmadridPlayerGoal = {
-    ['89 min']: realmadrid.ST + ` ${goal}`,
-    ['91 min']: realmadrid.ST + ` ${goal}`,
-    ['92 min']: realmadrid.LF + ` ${goal}`,
-}
-let liverpoolGoal = Object.keys(liverpoolPlayerGoal).length;
-let realmadridGoal = Object.keys(realmadridPlayerGoal).length;
-console.log(`Общий счет: LIV:${liverpoolGoal} - RMA:${realmadridGoal}`);
+// const goalMax = 9;
+// let goal = 'GOAL';
+// let yellowCard = 'Yellow Card';
+// let redCard = 'Red Card';
+// let liverpool = {
+//     GK: 'Alisson',
+//     RB: 'Trent',
+//     CB: 'Matip',
+//     CB: 'VVD',
+//     LB: 'Robertson',
+//     CAP: 'Fabihno',
+//     CAP: 'Thiago',
+//     CAP: 'Henderson',
+//     LF: 'Dias',
+//     ST: 'Mane',
+//     RW: 'Salah'
+// }
+// let realmadrid = {
+//     GK: 'Courtois',
+//     RB: 'Carvajal',
+//     CB: 'Militao',
+//     CB: 'Nacho',
+//     LB: 'Mendy',
+//     CAP: 'Casemiro',
+//     CAP: 'Kroos',
+//     CAP: 'Modric',
+//     LF: 'jr Vinisius',
+//     ST: 'Benzema',
+//     RW: 'Valverde'
+// }
+// let liverpoolPlayerGoal = {
+//     ['12 min']: liverpool.RW + ` ${goal}`,
+//     ['32 min']: liverpool.ST + ` ${goal}`,
+//     ['45 min']: liverpool.RB + ` ${goal}`,
+//     ['54 min']: liverpool.LF + ` ${goal}`,
+// }
+// let realmadridPlayerGoal = {
+//     ['89 min']: realmadrid.ST + ` ${goal}`,
+//     ['91 min']: realmadrid.ST + ` ${goal}`,
+//     ['92 min']: realmadrid.LF + ` ${goal}`,
+// }
+// let liverpoolGoal = Object.keys(liverpoolPlayerGoal).length;
+// let realmadridGoal = Object.keys(realmadridPlayerGoal).length;
+// console.log(`Общий счет: LIV:${liverpoolGoal} - RMA:${realmadridGoal}`);
 
-function getWinner() {
-    if (liverpoolGoal > realmadridGoal) {
-        console.log(`Winner: Liverpool`);
-    } else if (liverpoolGoal === realmadridGoal) {
-        console.log('Extra Time');
+// function getWinner() {
+//     if (liverpoolGoal > realmadridGoal) {
+//         console.log(`Winner: Liverpool`);
+//     } else if (liverpoolGoal === realmadridGoal) {
+//         console.log('Extra Time');
+//     } else {
+//         console.log('Winner Real Madrid');
+//     }
+// }
+// getWinner(liverpoolGoal, realmadridGoal);
+
+// let goalScore  = Object.assign({}, liverpoolPlayerGoal, realmadridPlayerGoal);
+// console.log(goalScore);
+
+//Task 2
+// let student1 = {
+//     name: 'Polina',
+//     age: 27,
+// }
+
+// let student2 = {
+//     name: 'Polina',
+//     age: 27,
+// }
+// function equalsObj(student1, student2) {
+//     return JSON.stringify(student1) === JSON.stringify(student2);
+// }
+// let resultEquals = equalsObj(student1, student2);
+// console.log(resultEquals);
+
+//Task 3
+//! empty key
+function checkName(animals) {
+    if(animals === undefined) {
+        console.log('Empty');
     } else {
-        console.log('Winner Real Madrid');
+        console.log(animals);
     }
-}
-getWinner(liverpoolGoal, realmadridGoal);
+}    
+    const animals = {
+        cat: {
+            name: 'Енчик',
+            age: 3,
+        },
+        dog: {
+            name: 'Орео',
+            age: 2,
+        },
+    }
+let result = checkName(animals.dog);
+console.log(result);
+//! Empty obj
+// let fish = {
 
-
-let goalScore  = Object.assign({}, liverpoolPlayerGoal, realmadridPlayerGoal);
-console.log(goalScore);
+// }
+// if (Object.keys(fish).length === 0) {
+//     console.log('пусто');
+// }
+// console.log(fish);
