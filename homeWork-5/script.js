@@ -41,17 +41,17 @@ let salaries = {
     andrey: 500,
     sveta: 413,
     anton: 987,
-    andrey: 664,
+    slava: 664,
     alexandra: 199,
 };
-salaries.andreyFirst = 500;
 let sum = 0;
+let numberOfEmployee = 0;
 for (let key in salaries) {
     sum += salaries[key];
+    numberOfEmployee++;
 }
-let averageSalary = sum / 5;
+let averageSalary = sum / numberOfEmployee;
 console.log(averageSalary);
-// не нашла другого способа решения,кроме как добавить значение к ключу с другим именем
 
 //task 6
 let login = prompt('Введите ваш логин', '');
@@ -61,18 +61,18 @@ let userData = {
     userPassword: password,
     check: checkUser,
 };
-userData.check();
 
-let approved;
-function checkUser(login, password, approved) {
-    approved = prompt(`Логин: ${this.userLogin}, Пароль: ${this.userPassword}. Всё верно?`, 'yes');
-    if (approved === 'yes') {
+let checkLogin = prompt('Подтвердите логин', '');
+let checkPassword = prompt('Подтвердите пароль', '');
+
+function checkUser() {
+    if (login === checkLogin && password === checkPassword) {
         return alert('Добро пожаловать!');
     } else {
         return alert('Проверьте правильность ввода своих данных');
     }
 }
-checkUser(login, password, approved);
+userData.check();
 
 //ADVANCED
 //task 1
@@ -103,7 +103,7 @@ let scoreMatch = {
     9: 'девять',
 };
 let footbolScore = prompt('Какой счёт?', '2 : 5');
-alert(`Счёт ${scoreMatch[footbolScore[0]]} : ${scoreMatch[footbolScore[0]]}`);
+alert(`Счёт ${scoreMatch[footbolScore[0]]} : ${scoreMatch[footbolScore[4]]}`);
 
 //task 2
 let student1 = {
@@ -136,7 +136,8 @@ for (let key in animals.bird) {
 if (animals.bird === undefined) {
         console.log('Этого свойства в объекте нет')
     }
-
+//or
+console.log(animals?.bird?.name);
 
 
 
