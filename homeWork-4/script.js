@@ -17,7 +17,7 @@ alert(getSum(100));
 function getOverpayment(money) {
     let percent = 17;
     let year = 5;
-    return Money * percent / 100 * year;
+    return money * percent / 100 * year;
 }
 let result = prompt('Какая сумма вас интересует?');
 alert(`Ваша переплата  ${getOverpayment(result)} `);
@@ -74,9 +74,9 @@ console.log(getSum(10, -8));
 
 function fooboo(bool, foo, boo) {
     if (bool) {
-        return foo;
+        return foo();
     } else {
-        return boo;
+        return boo();
     }
 }
 let bool = true;
