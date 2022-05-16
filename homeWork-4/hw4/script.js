@@ -15,7 +15,7 @@ console.log( getSum(50) );
 let sum = 1000;
 function credit (sum) {
     let price = sum * 0.17 * 5;
-    return (price);
+    return price;
 }
 console.log ('переплата = ' + credit(sum));
 
@@ -57,8 +57,9 @@ function getSum (a,b) {
     } else  {
         for ( let i = a; i <= b; i++) {
         sum += i;}
-    } 
-    return console.log(sum);
+    }
+    console.log(sum);
+    return sum;
 }
 //console.log ( getSum);
     getSum(1, 0)   // 1 + 0 = 1
