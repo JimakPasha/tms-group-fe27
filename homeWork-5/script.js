@@ -47,15 +47,21 @@ let salaries = {
 }
 let avergeSalary = 0;
 let numberofPeople = 0;
-for(let key in salaries) {
-numberofPeople++;
-avergeSalary += salaries[key]; 
+for (let key in salaries) {
+    numberofPeople++;
+    avergeSalary += salaries[key];
 }
 console.log(avergeSalary / numberofPeople);
 
 //task 6
 
-
+let client = {}
+client.login = prompt(`Напишите ваш Логин`,);
+client.password = prompt(`Напишите ваш Пароль`,);
+let yourAccount = confirm(`Ваши данные для входа - ` + client.login + ` ` + client.password + `?`);
+if (yourAccount) {
+    alert(`Все верно , вы можите войти`);
+}
 
 //ADVANCED
 //task 1
@@ -72,7 +78,7 @@ let scoreMatch = {
     9: 'девять',
 };
 let footbolScore = prompt('Какой счёт?', '2 : 5');
-alert(`Счёт ${scoreMatch[footbolScore[0]]} : ${scoreMatch[footbolScore[0]]}`);
+alert(`Счёт ${scoreMatch[footbolScore[0]]} : ${scoreMatch[footbolScore[4]]}`);
 
 //task 2
 let student1 = {
