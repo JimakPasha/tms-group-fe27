@@ -141,12 +141,7 @@ let student1 = {
     name: 'Polina',
     age: 27,
 }
-
-<<<<<<< HEAD
 let student2 = {
-=======
-// let student2 = {
->>>>>>> c7756f4 (bug-fix(hw-5):Task4 Вывод объекта)
     name: 'Polina',
     age: 27,
 }
