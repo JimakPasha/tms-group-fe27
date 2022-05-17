@@ -17,7 +17,7 @@ console.log(numbers);
 
 //task 4
 const students = ['Polina', 'Dasha', 'Masha'];
-students.splice(2, 2, 'Borya');
+students.splice(2, 1, 'Borya');
 students.splice(0, 1, 'Andrey');
 console.log(students);
 //or
@@ -45,11 +45,9 @@ console.log(allNumbers.indexOf(8));
 
 //task 7
 const binary = [0, 0, 0, 0];
-String(binary);
 console.log(binary[0] + '1' + binary[1] + '1' + binary[2] + '1' + binary[3]);
 //or
 let trueBinary = binary.join('1');
-String(trueBinary);
 console.log(trueBinary);
 
 //advanced
