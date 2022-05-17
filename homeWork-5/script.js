@@ -54,15 +54,24 @@ console.log(colors["ru pum pu ru rum"].red,  colors["ru pum pu ru rum"].blue);
         andrey: 664,
         alexandra: 199
     };
-    function sumSalaries (salaries){
-        let sum = 0;
-        for (let salary of Object.values(salaries)) {
-            sum += salary;       
-        }
-        let avg = sum/Object.values(salaries).length;
-    return avg 
-}
-    console.log ( sumSalaries(salaries) ); 
+
+let numberPeople = 0;
+let salaryAverage = 0;
+for (let key in salaries) {
+    numberPeople++
+    salaryAverage += salaries[key];
+    }
+console.log (salaryAverage / numberPeople);
+
+//     function sumSalaries (salaries){
+//         let sum = 0;
+//         for (let salary of Object.values(salaries)) {
+//             sum += salary;       
+//         }
+//         let avg = sum/Object.values(salaries).length;
+//     return avg 
+// }
+//     console.log ( sumSalaries(salaries) ); 
 // Вычислите среднюю зарплату сотрудников и результат поместите в соответствующую переменную
 
 // #### Task 6 🖥 -----???
@@ -173,13 +182,18 @@ console.log(`Счет ${gameScore[a[0]]} : ${gameScore[a[1]]}`);
 //Но произошла ошибка и в этом обьекте нету птицы. Если попробуем узнать имя мы получим **ОШИБКУ**. 
 // Задача придумать как обратиться к несуществующему обьекту и не получить ошибку чтобы наша программа работала дальше.
 
-// const animals = {
-//    cat: {
-//       name: 'Енчик',
-//       age: 3,
-//    },
-//    dog: {
-//       name: 'Орео',
-//       age: 2,
-//    }
-// }
+{
+const animals = {
+    cat: {
+    name: 'Енчик',
+    age: 3,
+    },
+    dog: {
+    name: 'Орео',
+    age: 2,
+    }
+}
+
+console.log(animals.bird?.name);
+
+}
