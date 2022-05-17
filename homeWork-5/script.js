@@ -63,8 +63,9 @@ console.log(avergeSalary / numberPeople);
 let account = {}
 account.login = prompt(`Напишите ваш Логин`, `Игорь`);
 account.password = prompt(`Напишите ваш Пароль`,`123456`);
-let trueAccount = confirm(`Ваши данные для входа - ` + account.login + ` ` + account.password + `?`);
-if(trueAccount) {
+let confirmLogin = prompt(`Подтвердите ваш Логин`, `Игорь`);
+let confirmPassword = prompt(`Подтвердите ваш Пароль`,`123456`);
+if(account.login === confirmLogin && account.password === confirmPassword) {
     alert(`Добро пожаловать`); 
 }
 
