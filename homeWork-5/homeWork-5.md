@@ -101,6 +101,7 @@ const animals = {
       name: 'Орео',
       age: 2,
    }
+   
 }
 ```
 
