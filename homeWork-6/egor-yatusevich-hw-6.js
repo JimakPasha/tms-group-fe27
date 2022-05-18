@@ -96,24 +96,25 @@ let a = binary.join('1');
 
 //  //Task 2 advanced
 
- const matrix = [
+
+const matrix = [
     [12, 98, 78, 65, 23],
     [54, 76, 98, 43, 65],
     [13, 324, 65, 312],
     [9092, 22, 45, 90000],
-];
-
-for ( let i = 0; i < matrix.length; i++) {
+]
+let sumMatrix = 0;
+for (let mat of matrix) {
     let sum = 0;
-    let b = 0;
-    for ( b ; b < matrix[i].length; b++) {
-        sum += matrix[i][b];
-    }
-    sum /= b;
-    matrix[i].splice(0, b, sum);
-    b = 0;
+   for (let m of mat) {
+    sum += m;
+   }
+   sum /= mat.length;
+   sumMatrix +=sum;
+   console.log(sum);
 }
-console.log(matrix);
+console.log(`Общее среднее значение всех чисел: ${sumMatrix / matrix.length}`);
+
 
 //Task 3
 
