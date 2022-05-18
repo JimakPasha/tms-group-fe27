@@ -94,22 +94,26 @@ let a = binary.join('1');
  console.log(fooPolindrom(newWord, isPolindrom));
 
 
- //Task 2 advanced
+//  //Task 2 advanced
 
  const matrix = [
     [12, 98, 78, 65, 23],
     [54, 76, 98, 43, 65],
     [13, 324, 65, 312],
     [9092, 22, 45, 90000],
-]
+];
 
-for (let mat of matrix) {
+for ( let i = 0; i < matrix.length; i++) {
     let sum = 0;
-   for (let m of mat) {
-    sum += m;
-   }
-   console.log(sum / mat.length);
+    let b = 0;
+    for ( b ; b < matrix[i].length; b++) {
+        sum += matrix[i][b];
+    }
+    sum /= b;
+    matrix[i].splice(0, b, sum);
+    b = 0;
 }
+console.log(matrix);
 
 //Task 3
 
@@ -144,3 +148,5 @@ for (let i = 0; i < arrDinamic.length; i++) {
 }
 console.log(arrDinamic);
 console.log(arrPowDinamic);
+
+
