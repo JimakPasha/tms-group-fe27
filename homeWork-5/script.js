@@ -78,7 +78,25 @@ console.log(middleSalaryPeople);
 
 {
 
-
+let login = prompt('Введите логин');
+let password = prompt('Введите пороль');
+    
+let loginPassword = {
+    login,
+    password,
+};
+    
+let confirmLogin = prompt('Подтвердите логин');
+let confirmPassword = prompt('Подтвердите пороль');
+    
+if(
+    loginPassword.login === confirmLogin && 
+    loginPassword.password === confirmPassword
+) {
+    alert('Добро пожаловать');
+} else {
+    alert('Попробуйте еще раз');
+}
 
 }
 
@@ -119,7 +137,19 @@ goalsScored(2, 3);
 
 {
 
-
+let student1 = {
+    name: 'Polina',
+    age: 27,
+}
+    
+let student2 = {
+    name: 'Polina',
+    age: 27,
+}
+    
+student1 = student2;
+console.log(student1 == student2);
+    
     
 }
 
@@ -127,6 +157,17 @@ goalsScored(2, 3);
 
 {
 
-
+const animals = {
+    cat: {
+        name: 'Енчик',
+        age: 3,
+    },
+    dog: {
+        name: 'Орео',
+        age: 2,
+    },
+};
+    
+console.log(animals?.user?.name);
     
 }
