@@ -64,8 +64,8 @@ console.log(str);
 
 palindrome('racecar')//true
 palindrome('car')//false
-function palindrome(str){
-    return str ===str.split('').reverse().join('');
+function palindrome(str) {
+    return str === str.split('').reverse().join('');
 }
 
 //#### Task 2 👨‍🏫
@@ -82,7 +82,22 @@ for (let i = 0; i < matrix.length; i++) {
     sum += matrix[i];
 }
 
-let result = sum/matrix.length;
+let result = sum / matrix.length;
 console.log(result);
 
-// Остальные задачи в процессе 
+//#### Task 3 👨‍🏫
+const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
+let plusNumber = [];
+let minusNumber = [];
+for (let item of mixedNumbers) {
+    if (item >= 0) {
+        plusNumber.push(item);
+    } else if (item < 0) {
+        minusNumber.push(item);
+    }
+}
+console.log(plusNumber);
+console.log(minusNumber);
+
+//#### Task 4 👨‍🏫
+
