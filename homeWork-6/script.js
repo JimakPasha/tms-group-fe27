@@ -24,6 +24,10 @@
    const numbers = [5, 43, 63, 23, 90,];
    numbers.length = 0;
    console.log(numbers);
+
+   const numbers1 = [5, 43, 63, 23, 90,];
+   numbers1.splice(0, numbers1.length);
+   console.log(numbers1);
 }
 
 /*Task 4
@@ -172,19 +176,27 @@
 
 //Решил так, не нашел/не понял можно ли сделать, что бы одним условием вывести сразу 2 массива
 
-/*Task 1/4
-Не успеваю по времени*/
+/*Task 1.4
+Создать массив длинной не менее 5, из динамически созданных случайных чисел. 
+Далее написать алгоритм который берет все числа из исходного массива, возводит их в куб и 
+записывает в новый массив. В конце вывести оба массива в консоль.*/
 
+//Math.random()   рандомное число
+//Math.floor()    округляет аргумент до ближайшего меньшего целого
+{
+   const randomArr = [
+      Math.floor(Math.random() * 100),
+      Math.floor(Math.random() * 100),
+      Math.floor(Math.random() * 100),
+      Math.floor(Math.random() * 100),
+      Math.floor(Math.random() * 100),
+   ];
+   console.log(randomArr);
 
+   const randomArrPow = [];
+   for (let item of randomArr) {
+      randomArrPow.push(Math.pow(item, 3));
+   }
 
-
-
-
-
-
-
-
-
-
-
-
+   console.log(randomArrPow);
+}
