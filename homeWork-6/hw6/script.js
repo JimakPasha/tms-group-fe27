@@ -64,7 +64,7 @@
 
     const arr = evenNumbers.concat(oddNumbers);
 
-    console.log (arr[8]);
+    console.log (arr.indexOf(8));
 
 //+ Соедините два массива чисел в один.
 //+ В полученном массиве попробуйте найти индекс числа **`8`**
@@ -84,6 +84,17 @@
 //> Для решения задач используйте циклы **`for`** или **`for of`**
 
 //#### Task 1 👨‍🏫
+
+let palindrome = 'шалаш';
+function checkPalindrome(palindrome) {
+    if (palindrome === palindrome.split('').reverse('').join('')) {
+        console.log('Слово является палиндромом');
+    }else {
+        console.log('Слово не является палиндромом');
+    }
+}
+checkPalindrome(palindrome);
+
 
 //Реализуйте функцию которая будет проверять, является ли слово палиндромом.
 
@@ -134,6 +145,19 @@ console.log(average(matrix));
 
 //#### Task 4 👨‍🏫
 
+let randomNumber = [];
+let randomNumberArray = [
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100)
+]
+for (let numberInPow of randomNumberArray){
+    randomNumber.push(Math.pow(numberInPow,3 ));
+}
+console.log(randomNumber);
+console.log(randomNumberArray);
 
 
 //Создать массив длинной не менее 5, из динамически созданных случайных чисел. 
