@@ -69,21 +69,28 @@ function palindrome(str) {
 }
 
 //#### Task 2 👨‍🏫
-// Возникли сложности с этим задание , с самим многомерным массивом , если упростить задачу , то все хорошо )
-// буду еще думать как сделть это с многомерным массивом 
-const matrix = [
-    12, 98, 78, 65, 23,
-    // [54, 76, 98, 43, 65],
-    // [13, 324, 65, 312],
-    // [9092, 22, 45, 90000],
-]
-let sum = 0;
-for (let i = 0; i < matrix.length; i++) {
-    sum += matrix[i];
-}
 
-let result = sum / matrix.length;
-console.log(result);
+const matrix = [
+    [12, 98, 78, 65, 23],  // 55.2
+    [54, 76, 98, 43, 65],  // 67.2
+    [13, 324, 65, 312],    // 178.5
+    [9092, 22, 45, 90000], // 24789.75
+];
+
+let sumMatrix = 0;
+let colNumbers = 0;
+let allSumMatrix = 0;
+
+for (let number of matrix) {
+    for (let i = 0; i < number.length; i++) {
+        sumMatrix += number[i];
+    }
+
+    colNumbers += number.length;
+    allSumMatrix += sumMatrix;
+    sumMatrix = 0;
+}
+console.log(allSumMatrix / colNumbers); //5582.5 
 
 //#### Task 3 👨‍🏫
 const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
@@ -101,3 +108,15 @@ console.log(minusNumber);
 
 //#### Task 4 👨‍🏫
 
+let randomNumberInPow = [];
+let randomNumber =
+    [Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100)];
+for (let numberInPow of randomNumber) {
+    randomNumberInPow.push(Math.pow(numberInPow, 3));
+}
+console.log(randomNumber);
+console.log(randomNumberInPow);
