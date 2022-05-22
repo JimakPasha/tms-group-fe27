@@ -100,11 +100,22 @@ console.log(student5);
 let students = [].concat(student1, student2, student3, student4, student5);
 console.log(students);
 
-//пока что не могу что то решить последнюю часть задания
-function getGroupCredit(students) {
-    
+let getGroupCredit = students.reduce((accum, item) => {
+    let sumA;
+    let sumB;
+    let sumC;
+    for (let y = 0; y < students.length; y++) {
+    if (students[y].rate === 'A') {
+        sumA = +(students[y].salary * 12);
+    } else if (students[y].rate === 'B') {
+        sumB = +(students[y].salary * 9);
+    } else if (students[y].rate === 'C') {
+        sumC = +(students[y].salary * 6);
+    }
 }
-getGroupCredit(students);
+    return accum = sumA + sumB + sumC;
+});
+console.log(getGroupCredit);
 
 //task 2
 function cutVowel(someString) {
@@ -116,9 +127,9 @@ console.log(cutVowel('This website is for losers LOL!'));
 //task 3
 let letter = 'abcDEf';
 let letterMultiply = letter.split('').map((element, index) => {
-    return element.repeat(index + 1);
+    return element = element.charAt(0).toUpperCase() + element.slice(1) + element.toLowerCase().repeat(index + 1);
 });
-console.log(letterMultiply);
+console.log(letterMultiply.join('-'));
 
 //task 4
 let numberString = '3 -1 8 -4 2';
