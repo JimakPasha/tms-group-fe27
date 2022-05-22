@@ -10,7 +10,7 @@ console.log(user);
 let contry = {
     name: 'Kazakhstan',
     capital: 'Astana',
-    population: '1.2 mil',
+    population: '1.2 mil'
 }
 console.log('name' in contry);
 
@@ -18,7 +18,7 @@ console.log('name' in contry);
 const student = {
     name: 'John',
     age: 19,
-    isHappy: true,
+    isHappy: true
 }
 for (key in student) {
     console.log(key);
@@ -30,10 +30,9 @@ const colors = {
     'ru pum pu ru rum': {
         red: 'красный',
         green: 'зеленый',
-        blue: 'синий',
+        blue: 'синий'
     },
 };
-
 for (let value of Object.values(colors["ru pum pu ru rum"])) {
     console.log(value); 
 }
@@ -49,7 +48,7 @@ let salaries = {
     ['I.Sveta']: 413,
     ['N.Anton']: 987,
     ['T.Andrey']: 664,
-    ['V.Alexandra']: 199,
+    ['V.Alexandra']: 199
 }
 let sumSal = 0;
 for (key in salaries) {
@@ -93,7 +92,7 @@ let liverpool = {
     CAP: 'Henderson',
     LF: 'Dias',
     ST: 'Mane',
-    RW: 'Salah',
+    RW: 'Salah'
 }
 let realmadrid = {
     GK: 'Courtois',
@@ -106,7 +105,7 @@ let realmadrid = {
     CAP: 'Modric',
     LF: 'jr Vinisius',
     ST: 'Benzema',
-    RW: 'Valverde',
+    RW: 'Valverde'
 }
 let liverpoolPlayerGoal = {
     ['12 min']: liverpool.RW + ` ${goal}`,

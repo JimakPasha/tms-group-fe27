@@ -53,11 +53,11 @@ let binaryStr = binary.join('1');
 console.log(binaryStr);
 
 //Advanced 1
+//! 1 method
 let str = '';
 let arr = Array.from(str);
 let arrReverse = arr;
 arrReverse.reverse(arr);
-
 function checkPolifil(arr, arrReverse) {
     if (arr === arrReverse) {
         console.log(`Polifil (true):${arr}`);
@@ -68,18 +68,29 @@ function checkPolifil(arr, arrReverse) {
 }
 checkPolifil('шалаш', 'шалаш');
 
-//Advanced 2 error
-// const matrix = [
-//     [12, 98, 78, 65, 23],
-//     [54, 76, 98, 43, 65],
-//     [13, 324, 65, 312],
-//     [9092, 22, 45, 90000],
-// ];
-// let matrixLentgth = matrix.length;
-// console.log(matrixLentgth);
-// let resultArr = +JSON.parse(matrix);
-// console.log(resultArr);
-// console.log(matrix.length);
+//! 2 method
+{
+let polindrom = (str) => str === str.split('').reverse().join('');
+let result = polindrom('шалаш');
+result ? console.log(`${result}: все верно`): console.log(`${result}: нет не правильно`);
+}
+
+//Advanced 2
+const matrix = [
+    [12, 98, 78, 65, 23],
+    [54, 76, 98, 43, 65],
+    [13, 324, 65, 312],
+    [9092, 22, 45, 90000],
+];
+let sum = 0;
+let average = 0; 
+for(let math of matrix) {
+    for(m of math) {
+        sum += m;
+        average += 1;
+    }
+    console.log(sum / average);
+}
 
 //Advanced 3
 {
@@ -90,11 +101,10 @@ let plusNumbers = mixedNumbers.filter(num => num > 0);
 console.log(plusNumbers);
 }
 //Advanced 4
-let arrNum = [17, 86, 42, 213,]
-let h = 3.3;
-let w = 7;
-function (arrNum, w, h) {
-    if () {
-
-    }
+{
+let arr = [];
+for(let i = 0; i < 5; i++) {
+    arr.push(Math.floor(Math.random() * 100))
+}
+console.log(arr);
 }
