@@ -33,7 +33,11 @@ const colors = {
         blue: 'синий'
     },
 };
+for (let value of Object.values(colors["ru pum pu ru rum"])) {
+    console.log(value); 
+}
 for (key in colors) {
+    console.log(colors[key]);
     console.log(colors[key].red);
     console.log(colors[key].blue);
 }
@@ -137,7 +141,6 @@ let student1 = {
     name: 'Polina',
     age: 27,
 }
-
 let student2 = {
     name: 'Polina',
     age: 27,
@@ -167,7 +170,7 @@ function checkName(animals) {
             age: 2,
         },
     }
-let result = checkName(animals.dog);
+let result = checkName(animals?.bird?.name);
 console.log(result);
 //! Empty obj
 let fish = {
