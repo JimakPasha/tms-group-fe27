@@ -61,7 +61,43 @@ const sumFib2 = fibonacci.reduce((accum, value) => {
 
 // Advanced level
 // Task 1
-// не успел сделать
+function Student(name, salary, rate) {
+    this.name = name;
+    this.salary = salary;
+    this.rate = rate;
+    this.showCedit = function () {
+        if (this.rate === 'A') {
+            return this.salary * 12;
+        } else if (this.rate === 'B') {
+            return this.salary * 9;
+        } else if (this.rate === 'C') {
+            return this.salary * 6;
+        } else if (this.rate === 'D') {
+            return 0;
+        }
+    };
+}
+let student1 = new Student('Anton', 1000, 'A');
+let student2 = new Student('Sveta', 500, 'B');
+let student3 = new Student('Katya', 700, 'C');
+let student4 = new Student('Dima', 800, 'B');
+let student5 = new Student('Natali', 300, 'D');
+
+const students = [];
+students.push(student1);
+students.push(student2);
+students.push(student3);
+students.push(student4);
+students.push(student5);
+
+function showGroupCredit(students) {
+    const sumAll = students.reduce((acc, element) => {
+        acc += element.showCedit();
+        return acc;
+    }, 0);
+    return sumAll;
+}
+
 
 // Task 2
 function chengeString(messege) {
@@ -73,8 +109,7 @@ function chengeString(messege) {
         n !== 'e' &&
         n !== 'i' &&
         n !== 'o' && 
-        n !== 'u') ? accum += letter :
-        accum);
+        n !== 'u') ? accum += letter : accum);
     }, '');
     return newMsg;
 }
@@ -129,8 +164,33 @@ console.log(isIsogram("aba"));
 console.log(isIsogram("moOse"));
 
 // Task 6
-console.log('A'.charCodeAt());
-// не успел сделать
+function transformString(string) {
+    string = string.split('');
+    const total1 = string.reduce((ac, item) => {
+        ac += item.charCodeAt();
+        return ac;
+    }, '');
+
+    let sumTotal1 = 0;
+    let total2 = '';
+    let sumTotal2 = 0;
+    for (let i = 0; i < total1.length; i++) { 
+        sumTotal1 += +total1[i]; // находим сумму цифр total1
+        if (total1[i] === '7') {
+            total2 += '1';
+            sumTotal2 += 1; // находим сумму цифр total2 (замена 7 на 1)
+        } else {
+            total2 += total1[i];
+            sumTotal2 += +total1[i]; // находим сумму цифр total2
+        }
+    }
+    console.log(total1, sumTotal1); //656667 36
+    console.log(total2, sumTotal2); //656661 30
+    
+    return sumTotal1 - sumTotal2; //6
+}
+console.log(transformString('ABC'));
+
 
 // Task 7
 // не успел сделать
