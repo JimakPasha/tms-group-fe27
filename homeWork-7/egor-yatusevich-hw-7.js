@@ -1,4 +1,4 @@
-'use strict'
+ 'use strict'
 //Task 1
 
 const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987];
@@ -123,5 +123,28 @@ function highAndLow(str) {
 }
 console.log(highAndLow("2 4 45 5 -8"));
 
+//Task 6 advanced
+function ascii(str) {
+    str = str.split('').reduce((acc, item, index) => {
+        acc += String(item.charCodeAt());
+        return acc;
+    }, '')
+    let total1 = str;
+    console.log(`Строка переведенная в ASCII: ${total1}`)
+    let total2 = total1.split('').map((item) => (item == 7) ? item = 1 : item = item).join('');
+    console.log(`Строка переведенная в ASCII с изменениями 7 на 1: ${total2}`)
+    return +total1 - +total2;
+}
+ console.log(ascii('ABC'));
 
-//Остальные к сожалению не успел сделать(((
+
+//  Task 5 и 7
+// не успел
+let a = 'dind';
+a = a.split('').reduce((acc, item, index, arr) => {
+   (item == arr.map((item1) => {
+       return (item != item1) ? item1 : item;
+   }) ) ? item =')' : item = '(';
+   return acc += item;
+},'')
+console.log(a);

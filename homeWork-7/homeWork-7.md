@@ -138,3 +138,7 @@
     "Success" => ")())())"
     "(( @" => "))(("
 ```
+
+item.split('').reduce((acc, item, index) => {
+    (item == item[index]) ? item =')' : item = '(';
+})
