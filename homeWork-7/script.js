@@ -4,20 +4,20 @@ const fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 
 fibonacci.forEach(element => {
     console.log(element);
 });
-fibonacci.forEach(function findElement(element) {
+fibonacci.forEach(function(element) {
     console.log(element);
 });
 
 //task 2
 const users = ['Darya', 'Masha', 'Denis', 'Vitaliy', 'Polina', 'Anton'];
 let copyUsers = users.map((element, index) => {
-        return(`member ${Number(index)+ 1}: ${element}`
+        return(`member ${index+ 1}: ${element}`
         );
     });
 console.log(copyUsers);
 
-let copyUsersDeclaration = users.map(function copyMember(element, index) {
-    return(`member ${Number(index)+ 1}: ${element}`
+let copyUsersDeclaration = users.map(function(element, index) {
+    return(`member ${index + 1}: ${element}`
     );
 });
 console.log(copyUsersDeclaration);
