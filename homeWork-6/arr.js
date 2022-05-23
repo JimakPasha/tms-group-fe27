@@ -38,14 +38,11 @@ for (let arr of cats) {
 console.log(cats);
 
 //Task6
-const evenNumbers = [2, 4, 6, 8, 10];
-const oddNumbers = [1, 3, 5, 7, 9];
-//? 1 method concat
+let evenNumbers = [2, 4, 6, 8, 10];
+let oddNumbers = [1, 3, 5, 7, 9];
+//? 1 method
 let allNumArr = oddNumbers.concat(evenNumbers);
-console.log(allNumArr[8]);
-//? 2 method join str error
-let allNumStr = oddNumbers.join(', ') + evenNumbers.join(', ');
-console.log(allNumStr);
+console.log(allNumArr.indexOf(8));
 
 //Task7
 const binary = [0, 0, 0, 0];
@@ -97,14 +94,20 @@ for(let math of matrix) {
 const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4];
 let minusNumbers = mixedNumbers.filter(num => num < 0);
 console.log(minusNumbers);
-let plusNumbers = mixedNumbers.filter(num => num > 0);
+let plusNumbers = mixedNumbers.filter(num => num >= 0);
 console.log(plusNumbers);
 }
 //Advanced 4
 {
 let arr = [];
 for(let i = 0; i < 5; i++) {
-    arr.push(Math.floor(Math.random() * 100))
+    arr.push(Math.floor(Math.random() * 100));
+    arr.push[i];
 }
 console.log(arr);
+let resultCubeArr = [];
+for (value of arr) {
+    resultCubeArr.push(value ** 3);
+}
+console.log(resultCubeArr);
 }
