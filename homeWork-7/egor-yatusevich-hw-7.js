@@ -123,6 +123,28 @@ function highAndLow(str) {
 }
 console.log(highAndLow("2 4 45 5 -8"));
 
+
+//  Task 5 advanced
+let isogrammString;
+function isogramma(isogrammString) {
+    isogrammString = isogrammString.split('')
+    .map((item, index, arr) =>  arr.indexOf(item) === arr.lastIndexOf(item) ? true : false);
+    let str;
+    for (str of isogrammString) {
+        if (str === false) {
+            str = false;
+            break;
+        } else {
+            str = true;
+        }
+        
+    }
+    return str;
+}
+
+console.log(isogramma('aba'));
+console.log(isogramma('Dermatoglyphics'));
+
 //Task 6 advanced
 function ascii(str) {
     str = str.split('').reduce((acc, item, index) => {
@@ -138,13 +160,11 @@ function ascii(str) {
  console.log(ascii('ABC'));
 
 
-//  Task 5 и 7
-// не успел
-let a = 'dind';
-a = a.split('').reduce((acc, item, index, arr) => {
-   (item == arr.map((item1) => {
-       return (item != item1) ? item1 : item;
-   }) ) ? item =')' : item = '(';
-   return acc += item;
-},'')
-console.log(a);
+//Task 7 advanced
+let str = 'recede';
+let duplicateStr = str.split('').map((item, index, array) => {
+    let res = '';
+   return  (array.indexOf(item) === array.lastIndexOf(item)) ? res = '(' : res = ')'
+    
+});
+console.log(duplicateStr.join(''));
