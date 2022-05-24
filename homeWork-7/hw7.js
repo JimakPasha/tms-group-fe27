@@ -193,4 +193,18 @@ console.log(transformString('ABC'));
 
 
 // Task 7
-// не успел сделать
+function chengeStr(string) {
+    let newStr = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string.split(string[i]).length > 2) {
+            newStr += ')';
+        } else {
+            newStr += '(';
+        }
+    }
+    return newStr;
+}
+console.log(chengeStr("din"));
+console.log(chengeStr("recede"));
+console.log(chengeStr("Success"));
+console.log(chengeStr("(( @"));
