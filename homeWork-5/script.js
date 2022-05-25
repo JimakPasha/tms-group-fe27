@@ -97,8 +97,10 @@ let scoreNumbers = {
     9: 'девять',
 };
 
-let score = prompt('Какой счёт ?', '2:5');
-alert(`Счёт матча: ${scoreNumbers[score[2]]} : ${scoreNumbers[score[5]]}`);
+let teamReal = prompt('Количество голов Реала:', '');
+let teamLiver = prompt('Количество голов Ливерпуля:', '');
+
+alert(`Счёт игры: ${scoreNumbers[teamReal]} : ${scoreNumbers[teamLiver]}`);
 
 // adv 2
 
