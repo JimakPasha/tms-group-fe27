@@ -14,7 +14,7 @@ fibonacci.forEach(function (element) {
 
 const users = ['Darya', 'Masha', 'Denis', 'Vitaliy', 'Polina', 'Anton'];
 const copyUsers = users.map((element, index) => {
-    return (`member ${Number(index) + 1}: ${element}`
+    return (`member ${index + 1}: ${element}`
     );
 });
 console.log(copyUsers);
@@ -75,7 +75,37 @@ console.log(result2);
 
 //#### Task 1 👨‍🏫
 
-//в процессе
+function Student(salary, rate, name) {
+    this.salary = salary;
+    this.rate = rate;
+    this.name = name;
+    this.sumCredit = function() {
+        
+    if (rate === 'A') {
+        return  salary * 12;
+    } else  if (rate === 'B') {
+        return  salary * 9;
+    } else  if (rate === 'C') {
+        return  salary * 6;
+    } else {
+        return 'Плохой рейтинг, кредит дать не можем!';
+    }
+}
+}
+let student1 = new Student(1250, 'C', 'Bob');
+let student2 = new Student(1800, 'B', 'Ilona');
+let student3 = new Student(1200, 'D', 'Ivan');
+let student4 = new Student(1400, 'B', 'Olga');
+let student5 = new Student(2100, 'A', 'Stas');
+let student6 = new Student(2500, 'A', 'Anton');
+
+let studentArrayCredit = [].concat(student1.sumCredit(), student2.sumCredit(),
+    student3.sumCredit(), student4.sumCredit(), student5.sumCredit(), student6.sumCredit());
+
+function studentCreditSum(studentArrayCredit) {
+    return studentArrayCredit.reduce((acc, item, index) => (typeof item === 'number') ? acc+=item : acc);
+}
+console.log(` Общая сумма кредита составляет: ${studentCreditSum(studentArrayCredit)}`);
 
 //#### Task 2 👨‍🏫 Тролли атакуют наш раздел с комментариями!!!
 
@@ -92,11 +122,23 @@ console.log(cutout('This website is for losers LOL!'));
 // accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 
-let letter = 'zxjtN';
-let Multiply = letter.split('').map((element, index) => {
-    return element.repeat(index + 1);
-});
-console.log(Multiply);
+// let letter = 'zxjtN';
+// let Multiply = letter.split('').map((element, index) => {
+//     return element.repeat(index + 1);
+// });
+// console.log(Multiply);
+
+function accum(string) {
+    string = string.split('');
+    const newStr = string.reduce((sum, letter, index) => {
+        let x = letter.toUpperCase();
+        let y = letter.toLowerCase();
+        sum += x + y.repeat(index) + '-';
+        return sum;
+    }, '');
+    return newStr.slice(0, (newStr.length - 1));
+}
+console.log(accum('cwAt'));
 
 // #### Task 4 👨‍🏫 Самый высокий и самый низкий
 
@@ -132,7 +174,20 @@ console.log(isogramma('Dermatoglyphics'));
 
 //#### Task 6 👨‍🏫 Считаем коды символов
 
-// пока разбираюсь 
+//'ABC' --> 'A' = 65, 'B' = 66, 'C' = 67 --> 656667
+
+function ascii(str) {
+    str = str.split('').reduce((acc, item, index) => {
+        acc += String(item.charCodeAt());
+        return acc;
+    }, '')
+    let total1 = str;
+    console.log(`${total1}`)
+    let total2 = total1.split('').map((item) => (item == 7) ? item = 1 : item = item).join('');
+    console.log(`${total2}`)
+    return +total1 - +total2;
+}
+ console.log(ascii('ABC'));
 
 // #### Task 7 👨‍🏫 Дубликаты
 
@@ -141,3 +196,18 @@ console.log(isogramma('Dermatoglyphics'));
 // "Success" => ")())())"
 // "(( @" => "))(("
 
+function chengeStr(string) {
+    let newStr = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string.split(string[i]).length > 2) {
+            newStr += ')';
+        } else {
+            newStr += '(';
+        }
+    }
+    return newStr;
+}
+console.log(chengeStr("din"));
+console.log(chengeStr("recede"));
+console.log(chengeStr("Success"));
+console.log(chengeStr("(( @"));
