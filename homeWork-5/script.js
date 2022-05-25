@@ -129,5 +129,5 @@ const animals = {
 };
 
 for (let key in animals.bird) {
-    console.log(key);
+    console.log(animals.bird.name);
 };
