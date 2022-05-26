@@ -11,9 +11,10 @@
    fibonacci.forEach(item => console.log(item));
 
    //function declaration
-   for (index = 0; index < fibonacci.length; index++) {
-      console.log(fibonacci[index]);
-   }
+   fibonacci.forEach(function (item) {
+      console.log(item);
+   });
+
 }
 
 /* Task 2
@@ -25,28 +26,18 @@
    console.log(users);
 
    //arrow function
-   const usersMap1 = users.map(item => "member 1: " + item);
+   const usersMap1 = users.map((item, index) => `member ${index + 1}: ${item}`);
    console.log(usersMap1);
 
    //или так
-   const usersMap11 = users.map(index => ("member 1: " + users[index]));
+   const usersMap11 = users.map((_, index) => `member ${index + 1}: ${users[index]}`);
    console.log(usersMap11);
 
    //function declaration
-   const usersMap2 = [];
-   for (let item of users) {
-      usersMap2.push("member 1: " + item);
-   }
-
+   const usersMap2 = users.map(function (item, index) {
+      return (`member ${index + 1}: ${item}`);
+   });
    console.log(usersMap2);
-
-   //или так
-   const usersMap3 = [];
-   for (let index = 0; index < users.length; index++) {
-      usersMap3.push("member 1: " + users[index]);
-   }
-
-   console.log(usersMap3);
 }
 
 /*Task 3
@@ -64,12 +55,19 @@
 
    //function declaration
    const numbersPlus2 = numbers.filter(function (item) {
+      return item > 0;
+   })
+
+   console.log(numbersPlus2);
+
+   /*
+   const numbersPlus2 = numbers.filter(function (item) {
       if (item > 0) {
          return true;
       }
    })
+   */
 
-   console.log(numbersPlus2);
 }
 
 /*Task 4
@@ -124,10 +122,39 @@
 + **C** - неплохой рейтинг и мы можем дать человеку кредит как 6 его зарплат
 + **D** - плохой рейтинг и мы не можем дать кредит
 */
+{
+   function Student(salary, rate, name) {
+      this.salary = salary;
+      this.rate = rate;
+      this.name = name;
+      this.sumCredit = function () {
+         if (rate === "A") {
+            return salary * 12;
+         } else if (rate === "B") {
+            return salary * 9;
+         } else if (rate === "C") {
+            return salary * 6;
+         } else {
+            return "Плохой рейтинг и мы не можем дать кредит";
+         }
+      }
+   }
 
-//пока не получился
+   let student1 = new Student(1000, "A", "Alex");
+   let student2 = new Student(1500, "B", "Kate");
+   let student3 = new Student(2000, "C", "Ann");
+   let student4 = new Student(2500, "D", "Tim");
+   let student5 = new Student(2000, "A", "Ben");
 
+   let studentArrayCredit = [].concat(student1.sumCredit(), student2.sumCredit(),
+      student3.sumCredit(), student4.sumCredit(), student5.sumCredit());
 
+   function studentCreditSum(studentArrayCredit) {
+      return studentArrayCredit.reduce((acc, item) => (typeof item === "number") ? acc += item : acc);
+   }
+
+   console.log(`Общая сумма кредита, которую можно выдать группе, составляет: ${studentCreditSum(studentArrayCredit)}`);
+}
 
 /*Task 1.2
 + Единственный способ справиться с этой ситуацией - удалить все гласные из комментариев троллей, нейтрализуя угрозу.
