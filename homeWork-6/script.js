@@ -28,16 +28,17 @@ const numbers = [5, 43, 63, 23, 90];
 numbers.splice(0,5); 
 console.log(numbers)
 
-
+// numbers.length = 0;
 }
 
 
 // Task 4
 {
 
-const students = ['Polina', 'Dasha', 'Masha'];
-students.pop();
-students.splice(0,1,`Andrey`); 
+const students = ['Polina', 'Dasha', 'Masha',];
+
+students.splice(0,1,`Andrey`);
+students.splice(-1,1,`Borya`);  
 console.log(students)
 
     
@@ -101,6 +102,30 @@ checkPalndrome(palindrome)
 
 }
 
+//Task  2.2
+
+{
+const matrix = [
+    [12, 98, 78, 65, 23],
+    [54, 76, 98, 43, 65],
+    [13, 324, 65, 312],
+    [9092, 22, 45, 90000]
+];
+let sumArray = 0;
+let sum = 0;
+let amount = 0;
+for (let num of matrix) {
+    for( let m of num) {
+        sum += m;
+        amount +=1 ;
+    }
+}
+sumArray = sum / amount;
+console.log(sumArray)
+
+}
+
+
 {
 // Task 2.3
 
@@ -117,5 +142,29 @@ for (let i of mixedNumbers) {
 }
 console.log(positiveNumbers);
 console.log(negativeNumbers);
+
+}
+
+
+//  Task 2.4
+
+{
+
+let randomNumber = [];
+let randomNumbers = [
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+    Math.floor(Math.random() * 100),
+];
+for(let number of randomNumbers){
+    randomNumber.push(Math.pow(number,3));
+}
+
+console.log(randomNumbers);
+console.log(randomNumber);
+
+
 
 }
