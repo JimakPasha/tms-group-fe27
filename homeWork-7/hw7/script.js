@@ -127,7 +127,7 @@ console.log(areVowels(coment2,consonants));
 const letter = 'zxjtN';
 const letterRepeat = letter.split('').map((element, index) => {
     return element.repeat(index + 1);
-});
+}).join('-');
 console.log(letterRepeat);
 
 // #### Task 4 👨‍🏫 Самый высокий и самый низкий
