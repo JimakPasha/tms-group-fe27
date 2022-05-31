@@ -234,7 +234,6 @@ function checkCheckbox() {
             colorTodoPanel[i].style.backgroundColor = '#d3d3d3';
         }
     }
-   
 }
 
 // appends elements
