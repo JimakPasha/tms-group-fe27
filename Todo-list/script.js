@@ -213,3 +213,104 @@ bodyWin1.append(doneBtn1, winText1, endWin1);
 endWin1.append(closeBtn1, endWinText1);
 bodyWin2.append(doneBtn2, winText2, endWin2);
 endWin2.append(closeBtn2, endWinText2);
+
+// создание логики
+
+addBtn.addEventListener('click', () => {
+
+    const valueInput = enterInput.value;
+
+    if (valueInput) {
+        const itemsProducts = document.createElement('div');
+        itemsProducts.classList.add('item');
+        itemsProducts.style.cssText = `
+            height: 200px;
+            background: #8B008B;
+            display: flex;
+            justify-content: space-between;
+            border: 4px solid #DA70D6;
+            border-radius: 15px;
+            heigh: auto;
+            margin: 35px;
+        `;
+
+        const task = document.createElement('div');
+        task.innerText = valueInput;
+        task.style.cssText = `
+            color: yellow;
+            background: purple;
+            padding: 33px 45px;
+            width: 300px;
+            font-size: 24px;
+            border: 4px solid #DA70D6;
+            border-radius: 10px;
+            margin: 50px 0px;
+        `;
+
+        const checkboxProduct = document.createElement('input');
+        checkboxProduct.type = 'checkbox';
+        checkboxProduct.style.margin = '30px';
+
+        checkboxProduct.addEventListener('click', () => {
+            if (checkboxProduct.checked) {
+                itemsProducts.style.opacity = 0.5;
+                itemsProducts.style.textDecoration = 'line-through';
+            } else {
+                itemsProducts.style.opacity = 1;
+                itemsProducts.style.textDecoration = 'none';
+            }
+        });
+
+        // Задняя часть окна (Х и Дата)
+
+        const endOfWin = document.createElement('div');
+        endOfWin.classList.add('endOfWin');
+
+        const deleteItemBtn = document.createElement('button');
+        deleteItemBtn.innerText = 'X';
+        deleteItemBtn.style.cssText = `
+            background: yellow;
+            border: 4px solid #DA70D6;
+            border-radius: 10px;
+            font-size: 24px;
+            color: #8B008B;
+            padding: 0px 20px;
+            margin: 10px 48px;
+        `;
+
+        deleteItemBtn.addEventListener('click', () => {
+            itemsProducts.remove();
+        });
+
+        const dateEl = document.createElement('div');
+        const date = new Date();
+        dateEl.innerText = generateDate(date);
+        dateEl.style.cssText = `
+            color: yellow;
+            background: purple;
+            padding: 0px 28px;
+            font-size: 20px;
+            border: 4px solid #DA70D6;
+            border-radius: 10px;
+            margin: 109px 3px;
+        `;
+
+        container.append(itemsProducts);
+        itemsProducts.append(checkboxProduct, task, endOfWin);
+        endOfWin.append(deleteItemBtn, dateEl);
+
+        enterInput.value = '';
+
+        // Кнопка удаления всех элементов
+
+        delBtn.addEventListener('click', () => {
+            itemsProducts.remove(itemsProducts);
+        });
+    };
+});
+
+function generateDate(date) {
+    return `${date.getDay()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+};
+
+
