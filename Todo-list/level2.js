@@ -121,124 +121,138 @@ infoPanellSearch.style.cssText = `
 
 // listTodoPanel
 const listTodoPanel = document.createElement('div');
-const arrayTodo = ['Clean room', 'learn js'];
-
-for (let i = 0; i < arrayTodo.length; i++) {
-    const itemTodoPanel = document.createElement('div');
-    itemTodoPanel.classList.add('itemTodoPanel');
-    itemTodoPanel.style.cssText = `
-        height: 150px;
-        width: 75%;
-        display: flex;
-        justify-content: space-between;
-        column-gap: 15px;
-        align-items: center;
-        border: 2px solid #000000;
-        border-radius: 15px;
-        padding: 15px;
-        margin: 0 auto;
-        margin-bottom: 30px;
-    `;
-    listTodoPanel.append(itemTodoPanel);
-
-    const todoLabel = document.createElement('label');
-    todoLabel.style.cssText = `
-        height: 40px;
-        width: 70px;
-        position: relative;
-        cursor: pointer;
-    `;
-    itemTodoPanel.append(todoLabel);
-
-    const todoLabelCheckbox = document.createElement('input');
-    todoLabelCheckbox.type = 'checkbox';
-    todoLabelCheckbox.classList.add('todoCheckbox');
-    todoLabelCheckbox.style.cssText = `
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 0 px;
-        height: 0px;
-        opacity: 0;
-    `;
-
-    const todoLabelSpan = document.createElement('span');
-    todoLabelSpan.classList.add('todoSpan');
-    todoLabelSpan.innerHTML = '';
-    todoLabelSpan.style.cssText = styleButton;
-    todoLabelSpan.style.width = '100%';
-    todoLabelSpan.style.position = 'absolute';
-    todoLabelSpan.style.top = '0';
-    todoLabelSpan.style.left = '0';
-  
-   
-    todoLabelCheckbox.setAttribute('onchange', 'checkCheckbox()');
-    todoLabel.append(todoLabelCheckbox, todoLabelSpan);
-   
-    
-    const todoText = document.createElement('div');
-    todoText.style.cssText = `
-        width: 100%;
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        background: #ffffff;
-        border: 2px solid #ffffff;
-        border-radius: 15px;
-    `;
-    todoText.innerText = arrayTodo[i];
-    itemTodoPanel.append(todoText);
-
-    const todoWrapper = document.createElement('div');
-    todoWrapper.style.cssText = `
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-    `;
-    itemTodoPanel.append(todoWrapper);
-
-    const todoClose = document.createElement('button');
-    todoClose.innerHTML = 'X';
-    todoClose.style.cssText = styleButton;
-    todoClose.style.width = '60px';
-    todoClose.style.height = '40px';
-
-    const todoDate = document.createElement('div');
-    todoDate.innerHTML = 'Date';
-    todoDate.style.cssText = `
-        height: 40px;
-        width: 100px;
-        padding: 5px;
-        font-size: 30px;
-        background-color: #fff;
-        border: 2px solid #fff;
-        border-radius: 10px;
-    `;
-    todoWrapper.append(todoClose, todoDate)
-}
-// стилизация Checkbox 
-function checkCheckbox() {
-    for (let i = 0; i < arrayTodo.length; i++) {
-        let checkedCheckbox = document.getElementsByClassName('todoCheckbox');
-        let birdSpan = document.getElementsByClassName('todoSpan');
-        let colorTodoPanel = document.getElementsByClassName('itemTodoPanel');
-        if (checkedCheckbox[i].checked) {
-            birdSpan[i].innerHTML = '&#10003';
-            colorTodoPanel[i].style.backgroundColor = 'grey';
-        } else {
-            birdSpan[i].innerHTML = '';
-            colorTodoPanel[i].style.backgroundColor = '#d3d3d3';
-        }
-    }
-   
-}
 
 // appends elements
 root.append(container);
 container.append(controlPanel, infoPanel, listTodoPanel);
 controlPanel.append(controlPanelDelAll, controlPanelDelLast, controlPanelInput, controlPanelAdd);
 infoPanel.append(infoPanelAll, infoPanelCompleted, infoPanellShowAll, infoPanellShowCompleted, infoPanellSearch);
+
+// Создание логики
+controlPanelAdd.addEventListener('click', () => {
+    const valueInput = controlPanelInput.value;
+
+    if (valueInput) {
+        const itemTodoPanel = document.createElement('div');
+        itemTodoPanel.classList.add('itemTodoPanel');
+        itemTodoPanel.style.cssText = `
+            height: 150px;
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 15px;
+            align-items: center;
+            border: 2px solid #000000;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        `;
+        listTodoPanel.append(itemTodoPanel);
+    
+        const todoLabel = document.createElement('label');
+        todoLabel.style.cssText = `
+            height: 40px;
+            width: 70px;
+            position: relative;
+            cursor: pointer;
+        `;
+
+        const todoText = document.createElement('div');
+        todoText.style.cssText = `
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            background: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 15px;
+        `;
+        todoText.innerText = valueInput;
+        itemTodoPanel.append(todoLabel, todoText);
+
+        const todoLabelSpan = document.createElement('span');
+        todoLabelSpan.classList.add('todoSpan');
+        todoLabelSpan.style.cssText = styleButton;
+        todoLabelSpan.style.width = '100%';
+        todoLabelSpan.style.position = 'absolute';
+        todoLabelSpan.style.top = '0';
+        todoLabelSpan.style.left = '0';
+    
+        const todoLabelCheckbox = document.createElement('input');
+        todoLabelCheckbox.type = 'checkbox';
+        todoLabelCheckbox.classList.add('todoCheckbox');
+        todoLabelCheckbox.style.cssText = `
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0 px;
+            height: 0px;
+            opacity: 0;
+        `;
+        todoLabelCheckbox.addEventListener('click', () => {
+            if (todoLabelCheckbox.checked) {
+                todoLabelSpan.innerHTML = '&#10003';
+                itemTodoPanel.style.backgroundColor = 'grey';
+                todoText.style.textDecoration = 'line-through';
+            } else {
+                todoLabelSpan.innerHTML = '';
+                itemTodoPanel.style.backgroundColor = '#d3d3d3';
+                todoText.style.textDecoration = 'none';
+            }
+        });
+        todoLabel.append(todoLabelCheckbox, todoLabelSpan);
+       
+        const todoWrapper = document.createElement('div');
+        todoWrapper.style.cssText = `
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        `;
+        itemTodoPanel.append(todoWrapper);
+    
+        const todoClose = document.createElement('button');
+        todoClose.innerHTML = 'X';
+        todoClose.style.cssText = styleButton;
+        todoClose.style.width = '60px';
+        todoClose.style.height = '40px';
+        todoClose.addEventListener('click', () => {
+            const qustion = confirm('Вы уверены?');
+            if (qustion) {
+                itemTodoPanel.remove();
+            } 
+        });
+    
+        const date = new Date();
+        const todoDate = document.createElement('div');
+        todoDate.style.cssText = `
+            height: 30px;
+            width: 120px;
+            padding: 5px;
+            font-size: 25px;
+            background-color: #fff;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        `;
+        todoDate.innerHTML = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+
+        todoWrapper.append(todoClose, todoDate)
+    }
+    controlPanelInput.value = '';
+});
+
+controlPanelDelLast.addEventListener('click', () => {
+    if (listTodoPanel.lastChild) {
+        listTodoPanel.removeChild(listTodoPanel.lastChild);
+    }
+});
+
+controlPanelDelAll.addEventListener('click', () => {
+    while (listTodoPanel.lastChild) {
+        listTodoPanel.removeChild(listTodoPanel.lastChild);
+    }
+});
