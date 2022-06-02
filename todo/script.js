@@ -48,7 +48,7 @@ const formBtn = `
     background: rgb(75, 229, 157);
     font-size: 20px;
     margin: 10px;
-    color: grey;
+    color: #3e3a3a;
     border: 2px solid black;
     border-radius: 22px;
 `;
@@ -58,8 +58,9 @@ const formText = `
     height: 75px;
     border: 2px solid;
     border-radius: 20px;
-    font-size: 17px;
-    text-align: center;
+    font-size: 25px;
+    background: white;
+    padding: 20px;
 `;
 
 const formRighStyle = `
@@ -184,104 +185,110 @@ searchInputSearch.style.cssText = `
     font-size: 17px;
 `;
 
-//formFirst
-const formFirst = document.createElement('div');
-formFirst.classList.add('formFirst');
-formFirst.style.cssText = form;
-
-const formBtn1 = document.createElement('button');
-formBtn1.classList.add('formBtn');
-formBtn1.innerHTML = '&#10004;';
-formBtn1.style.cssText = formBtn ;
-
-const formFirstText = document.createElement('input');
-formFirstText.classList.add('formText');
-formFirstText.placeholder = 'Todo text';
-formFirstText.style.cssText = formText;
-
-const formRight  = document.createElement ('div');
-formRight.classList.add('formRight');
-formRight.style.cssText = formRighStyle;
-
-
-const formBtnClouse = document.createElement('button');
-formBtnClouse.classList.add('btnClouse');
-formBtnClouse.innerHTML = '	&#10006;';
-formBtnClouse.style.cssText = formBtn;
-
-const formDate = document.createElement ('input');
-formDate.classList.add('formDate');
-formDate.placeholder = 'Data';
-formDate.style.cssText = `
-    width: 80px;
-    height: 36px;
-    border-radius: 20px;
-    border: 2px solid;
-    font-size: 17px;
-    text-align: center;
-`;
-
-
-
-
-
-//formTwo
-const formTwo = document.createElement('div');
-formTwo.classList.add('formTwo');
-formTwo.style.cssText = form;
-
-const formBtn2 = document.createElement('button');
-formBtn2.classList.add('formBtn');
-formBtn2.innerHTML = '&#10004;';
-formBtn2.style.cssText = formBtn ;
-
-const formTwoText = document.createElement('input');
-formTwoText.classList.add('formText');
-formTwoText.placeholder = 'Todo text';
-formTwoText.style.cssText = formText;
-
-const formRight2  = document.createElement ('div');
-formRight2.classList.add('formRight');
-formRight2.style.cssText = formRighStyle;
-
-
-const formBtnClouse2 = document.createElement('button');
-formBtnClouse.classList.add('btnClouse');
-formBtnClouse2.innerHTML = '	&#10006;';
-formBtnClouse2.style.cssText = formBtn;
-
-const formDate2 = document.createElement ('input');
-formDate2.classList.add('formDate');
-formDate2.placeholder = 'Data';
-formDate2.style.cssText = `
-    width: 80px;
-    height: 36px;
-    border-radius: 20px;
-    border: 2px solid;
-    font-size: 17px;
-    text-align: center;
-`;
-
-
-
 
 // appends elements
 root.append(header,container);
 header.append(title);
-container.append(lineInput, searchInput, formFirst, formTwo);
+container.append(lineInput, searchInput);
 lineInput.append(lineInputDelAll, lineInputDelLast, myPlans, lineInputAdd);
 searchInput.append(searchInputAll, searchInputCompleted,searchInputBtnAll, searchInputBtnCompleted, searchInputSearch );
-formFirst.append(formBtn1, formFirstText, formRight);
-formRight.append(formBtnClouse, formDate);
-formTwo.append(formBtn2, formTwoText,formRight2);
-formRight2.append(formBtnClouse2, formDate2);
+
+// создание логики
+// кнопка add
+lineInputAdd.addEventListener('click', () => {
+
+    const inputValue = myPlans.value;
+
+    if(inputValue){
+
+        const todoItem = {};
+        todoItem.date = generatedate();
+
+        let taskForm = document.createElement('div');
+        taskForm.classList.add('form');
+        taskForm.style.cssText = form;
+
+        let checkboxForm = document.createElement('input');
+        checkboxForm.classList.add('checkbox');
+        checkboxForm.type = 'checkbox';
+        checkboxForm.style.cssText = `
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        cursor: pointer;
+        ` ;
+
+        checkboxForm.addEventListener('click', () => {
+            if (checkboxForm.checked) {
+                taskFormText.style.opacity = 0.2;
+                taskFormText.style.textDecoration = 'line-through';
+            } else {
+                taskFormText.style.opacity = 1;
+                taskFormText.style.textDecoration = 'none';
+            }
+        });
 
 
-// Как обращаться к классом ?
-//Как использовать hover в js?
-// стр. 174 и 192 одинаковые кнопки, можно ли не создавать заново, а просто добавить? 
-//Как это корректно сделать?(formBtn1-formBtn2)
-//
+        let taskFormText = document.createElement('div');
+        taskFormText.classList.add('formText');    
+        taskFormText.style.cssText = formText;
+
+        let taskFormRight  = document.createElement ('div');
+        taskFormRight.classList.add('formRight');
+        taskFormRight.style.cssText = formRighStyle;
 
 
+        let taskFormBtnClose = document.createElement('button');
+        taskFormBtnClose.classList.add('btnClose');
+        taskFormBtnClose.innerHTML = '	&#10006;';
+        taskFormBtnClose.style.cssText = formBtn;
 
+        taskFormBtnClose.addEventListener('click', () => {
+            taskForm.remove();
+        });
+
+        let taskFormDate = document.createElement ('div');
+        let date = new Date();
+        taskFormDate.style.cssText = `
+            width: 100%;
+            height: 36px;
+            border-radius: 20px;
+            border: 2px solid;
+            background: white;
+            padding: 10px;
+        `;
+        taskFormDate.innerHTML = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+
+
+        container.append(taskForm);
+        taskForm.append(checkboxForm, taskFormText, taskFormRight);
+        taskFormRight.append(taskFormBtnClose, taskFormDate)
+
+        taskFormText.innerText = inputValue;
+
+        myPlans.value = '';
+    }
+});
+
+//Delete all
+// в переменной formElements получается контейнер с массивоподобной структурой 
+// в котором лежат выбранные элементы, понятно почему не получается удалять 
+// как-то так: container.removeChild(formElements) 
+// или formElements.parentNode.removeChild(formElements)
+// есть ли какой-то способ удалять элементы по querySelectorAll без перебора циклом ?
+lineInputDelAll.addEventListener('click', () => {
+    let formElements = document.querySelectorAll("div.form"); 
+
+    for(let i = 0; i < formElements.length; i++){
+        let element = document.querySelector('div.form');
+        element.remove();
+    }    
+});
+
+//function
+
+function generatedate () {
+    const date = new Date();
+    return `${date.getHours()}:${date.getMinutes()} 
+    ${date.getMonth() + 1}`;
+}
