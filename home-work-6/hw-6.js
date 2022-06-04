@@ -81,17 +81,17 @@ let sum = 0;
 let amount = 0;
 
 for (let num of matrix) {
-	for( let m of num) {
-	sum += m;
-	amount += 1;
-}
+	for (let m of num) {
+		sum += m;
+		amount += 1;
+	}
 }
 sumArray = sum / amount;
 console.log(sumArray);
 
 //Task-3
 
-const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4];
+const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4];
 let plusNumbers = [];
 let minusNumbers = [];
 for (let i of mixedNumbers) {
@@ -114,8 +114,8 @@ let randomNumbers = [
 	Math.floor(Math.random() * 100),
 	Math.floor(Math.random() * 100),
 ];
-for(let number of randomNumbers) {
-	randomNumber.push(Math.pow(number,3));
+for (let number of randomNumbers) {
+	randomNumber.push(Math.pow(number, 3));
 }
 console.log(randomNumbers);
 console.log(randomNumber);
