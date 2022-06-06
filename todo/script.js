@@ -189,34 +189,115 @@ searchInputSearch.style.cssText = `
 // appends elements
 root.append(header,container);
 header.append(title);
-container.append(lineInput, searchInput);
+container.append(
+    lineInput,
+    searchInput,
+);
 lineInput.append(lineInputDelAll, lineInputDelLast, myPlans, lineInputAdd);
 searchInput.append(searchInputAll, searchInputCompleted,searchInputBtnAll, searchInputBtnCompleted, searchInputSearch );
 
 // создание логики
-// кнопка add
-lineInputAdd.addEventListener('click', () => {
+let todos = [];
 
+if (localStorage.getItem('todo')) {
+    todos = JSON.parse(localStorage.getItem('todo'));
+    todos.forEach((item) => {
+    createElement(item);
+    });
+};
+
+lineInputAdd.addEventListener('click', () => {
     const inputValue = myPlans.value;
 
     if(inputValue){
+        const newTodoObj = {};
+        newTodoObj.date = generatedate();
+        newTodoObj.id = generateId();
+        newTodoObj.text = inputValue; 
+        newTodoObj.isChecked = false;
+        todos.push(newTodoObj);
+        createElement(newTodoObj);
+        updateLocalStorageTodo(todos);
+    }
+    myPlans.value = '';
+});
 
-        const todoItem = {};
-        todoItem.date = generatedate();
+lineInputDelAll.addEventListener('click', () => {
+    todos.length = 0;
+    updateLocalStorageTodo(todos);
+    // let formElements = document.querySelectorAll("div.form"); 
 
+    // for(let i = 0; i < formElements.length; i++){
+    //     let element = document.querySelector('div.form');
+    //     element.remove();
+    // }    
+});
+
+// lineInputDelLast.addEventListener('click', () => {
+//     if (listProducts.lastChild) {
+//         todoArr.pop();
+//         updateLocalStorageTodo(todoArr);
+//         listProducts.removeChild(listProducts.lastChild);
+//     }
+// });
+
+function generateId() {
+    return String(
+        Math.random() * 10000 + (Math.random() * 10000) / (Math.random() * 100)
+    ).replace('.', '0');
+    };
+
+    function generatedate () {
+        const date = new Date();
+        return `${date.getHours()}:${date.getMinutes()} 
+        ${date.getMonth() + 1}`;
+    };
+    
+    const dictionaryMonth = {
+        1: 'янв',
+        2: 'фев',
+        3: 'март',
+        4: 'апр',
+        5: 'май',
+        6: 'июнь',
+        7: 'июль',
+        8: 'авг',
+        9: 'сен',
+        10: 'окт',
+        11: 'нояб',
+        12: 'дек',
+    };
+
+    function createElement(obj) {
         let taskForm = document.createElement('div');
         taskForm.classList.add('form');
+        taskForm.id = obj.id;
         taskForm.style.cssText = form;
 
         let checkboxForm = document.createElement('input');
         checkboxForm.classList.add('checkbox');
         checkboxForm.type = 'checkbox';
+        checkboxForm.checked = obj.isChecked;
         checkboxForm.style.cssText = `
         width: 40px;
         height: 40px;
         margin: 10px;
         cursor: pointer;
         ` ;
+        
+        let taskFormDate = document.createElement ('div');
+        let date = new Date();
+        taskFormDate.innerHTML = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+        taskFormDate.innerHTML = obj.date;
+        //let date = new Date();
+        taskFormDate.style.cssText = `
+            width: 100%;
+            height: 36px;
+            border-radius: 20px;
+            border: 2px solid;
+            background: white;
+            padding: 10px;
+        `;
 
         checkboxForm.addEventListener('click', () => {
             if (checkboxForm.checked) {
@@ -226,11 +307,19 @@ lineInputAdd.addEventListener('click', () => {
                 taskFormText.style.opacity = 1;
                 taskFormText.style.textDecoration = 'none';
             }
+            todos = todos.map((item) => {
+                if (item.id === obj.id) {
+                item.isChecked = checkboxForm.checked;
+                }
+                return item;
+            });
+            updateLocalStorageTodo(todos);
         });
 
 
         let taskFormText = document.createElement('div');
-        taskFormText.classList.add('formText');    
+        taskFormText.classList.add('formText');
+        taskFormText.innerHTML = obj.text;    
         taskFormText.style.cssText = formText;
 
         let taskFormRight  = document.createElement ('div');
@@ -244,51 +333,17 @@ lineInputAdd.addEventListener('click', () => {
         taskFormBtnClose.style.cssText = formBtn;
 
         taskFormBtnClose.addEventListener('click', () => {
+            todos = todos.filter((i) => i.id !== obj.id);
+            updateLocalStorageTodo(todos);
             taskForm.remove();
-        });
-
-        let taskFormDate = document.createElement ('div');
-        let date = new Date();
-        taskFormDate.style.cssText = `
-            width: 100%;
-            height: 36px;
-            border-radius: 20px;
-            border: 2px solid;
-            background: white;
-            padding: 10px;
-        `;
-        taskFormDate.innerHTML = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+        });        
 
 
         container.append(taskForm);
         taskForm.append(checkboxForm, taskFormText, taskFormRight);
-        taskFormRight.append(taskFormBtnClose, taskFormDate)
+        taskFormRight.append(taskFormBtnClose, taskFormDate);
+    };
 
-        taskFormText.innerText = inputValue;
-
-        myPlans.value = '';
+    function updateLocalStorageTodo(array) {
+        localStorage.setItem('todo', JSON.stringify(array));
     }
-});
-
-//Delete all
-// в переменной formElements получается контейнер с массивоподобной структурой 
-// в котором лежат выбранные элементы, понятно почему не получается удалять 
-// как-то так: container.removeChild(formElements) 
-// или formElements.parentNode.removeChild(formElements)
-// есть ли какой-то способ удалять элементы по querySelectorAll без перебора циклом ?
-lineInputDelAll.addEventListener('click', () => {
-    let formElements = document.querySelectorAll("div.form"); 
-
-    for(let i = 0; i < formElements.length; i++){
-        let element = document.querySelector('div.form');
-        element.remove();
-    }    
-});
-
-//function
-
-function generatedate () {
-    const date = new Date();
-    return `${date.getHours()}:${date.getMinutes()} 
-    ${date.getMonth() + 1}`;
-}
