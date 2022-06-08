@@ -170,6 +170,7 @@ export function app() {
         search = todoArray.find((item) => {    
             if (item.text === searchObj.text.toLowerCase()) {
                 todoListPannel.innerHTML = '';
+                inputSearch.value = '';
                 return search = createItemTodo(item, todoListPannel);
 
             } else if (searchObj.text === '') {
