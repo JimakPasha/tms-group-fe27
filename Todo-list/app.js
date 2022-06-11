@@ -18,7 +18,6 @@ export function app() {
     container.style.cssText = containerStyle;
 
 
-
     const controlPanel = document.createElement('div');
     controlPanel.style.cssText = controlPanelStyle;
 
@@ -40,7 +39,6 @@ export function app() {
     controlPanelAdd.innerText = 'Add';
     controlPanelAdd.style.cssText = styleButton;
     controlPanelAdd.style.width = '300px';
-
 
 
     const infoPanel = document.createElement('div');
@@ -70,7 +68,6 @@ export function app() {
 
 
     const listTodoPanel = document.createElement('div');
-
     
     root.append(container);
     container.append(controlPanel, infoPanel, listTodoPanel);
@@ -144,7 +141,6 @@ export function app() {
 
     controlPanelAdd.addEventListener('click', () => {
         const valueInput = controlPanelInput.value;
-
         if (valueInput) {
             const todo = {};
             todo.id = generateId();
@@ -180,10 +176,10 @@ export function app() {
         }
     });
 
-    function createItemTodoPanel(obj) {
+    function createItemTodoPanel({id, text, isChecked, date}) {
         const itemTodoPanel = document.createElement('div');
         itemTodoPanel.classList.add('itemTodoPanel');
-        itemTodoPanel.id = obj.id;
+        itemTodoPanel.id = id;
         itemTodoPanel.style.cssText = itemTodoPanelStyle;
         listTodoPanel.append(itemTodoPanel);
         
@@ -192,7 +188,7 @@ export function app() {
         
         const todoText = document.createElement('div');
         todoText.style.cssText = todoTextStyle;
-        todoText.innerText = obj.text;
+        todoText.innerText = text;
         itemTodoPanel.append(todoLabel, todoText);
         
         const todoLabelSpan = document.createElement('span');
@@ -206,7 +202,7 @@ export function app() {
         
         const todoLabelCheckbox = document.createElement('input');
         todoLabelCheckbox.type = 'checkbox';
-        todoLabelCheckbox.checked = obj.isChecked;
+        todoLabelCheckbox.checked = isChecked;
         todoLabelCheckbox.classList.add('todoCheckbox');
         todoLabelCheckbox.style.cssText = todoLabelCheckboxStyle;
     
@@ -228,7 +224,7 @@ export function app() {
                 todoText.style.textDecoration = 'none';
             }
             todos = todos.map((item) => {
-                if(item.id === obj.id) {
+                if(item.id === id) {
                 item.isChecked = todoLabelCheckbox.checked;
                 }
                 return item;
@@ -257,7 +253,7 @@ export function app() {
         
         const todoDate = document.createElement('div');
         todoDate.style.cssText = todoDateStyle;
-        todoDate.innerHTML = obj.date;
+        todoDate.innerHTML = date;
         
         todoWrapper.append(todoClose, todoDate);
         styleBtn();
