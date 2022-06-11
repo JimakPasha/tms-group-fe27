@@ -1,15 +1,17 @@
 import { getTodoList } from "../localStorage.js";
 import { todoArray, setTodo } from "../todoArray.js";
+let arrayCompleted = [];
 
-export let arrayCompleted;
-export function counterAll() {
+function counterAll() {
     if (getTodoList()) {
         setTodo(JSON.parse(getTodoList()));
         return todoArray.length;
+    } else {
+        return 0;
     }
 }
 
-export function counterCompleted() {
+function counterCompleted() {
     if (getTodoList()) {
         setTodo(JSON.parse(getTodoList()));
         arrayCompleted = todoArray.filter((item) => {
@@ -20,3 +22,4 @@ export function counterCompleted() {
     }
         return arrayCompleted.length;
 }
+export {arrayCompleted, counterAll, counterCompleted}
