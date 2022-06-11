@@ -245,7 +245,7 @@ export function app() {
         todoClose.addEventListener('click', () => {
             const qustion = confirm('Вы уверены?');
             if (qustion) {
-                todos.splice(todos.indexOf(id), 1);
+                todos = todos.filter((item) => item.id !== id); 
                 updateLocalStorageTodo(todos);
                 itemTodoPanel.remove();
             } 
