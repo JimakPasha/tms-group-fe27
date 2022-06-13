@@ -1,7 +1,7 @@
 export const containerStyle = `
 width: 1000px;
-background-color: #d3d3d3;
-border: 2px solid #000000;
+background-image: url("img/708aaa8191ea150221e13c072e6626e0.jpg");
+border: 4px solid #000000;
 border-radius: 20px;
 padding: 15px;
 margin: 0 auto;
@@ -25,6 +25,9 @@ font-size: 20px;
 text-align: center;
 border: 2px solid #000000;
 border-radius: 15px;
+background-color: rgba(0, 0, 0, 0.4);
+color: white;
+box-shadow: 10px 10px 10px 2px rgba(255, 255, 255, 0.2);
 `;
 
 export const infoPanelStyle = `
@@ -42,6 +45,7 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+color: rgba(255, 255, 255, 0.9);
 `;
 
 export const infoPanelCompletedStyle = `
@@ -49,6 +53,7 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+color: rgba(255, 255, 255, 0.9);
 `;
 
 export const infoPanellSearchStyle = `
@@ -57,6 +62,9 @@ font-size: 25px;
 text-align: center;
 border: 2px solid #000000;
 border-radius: 15px;
+background-color: rgba(0, 0, 0, 0.4);
+color: white;
+box-shadow: 10px 10px 10px 2px rgba(255, 255, 255, 0.2);
 `;
 
 export const itemTodoPanelStyle = `
@@ -66,11 +74,13 @@ display: flex;
 justify-content: space-between;
 column-gap: 15px;
 align-items: center;
+background: rgba(255, 255, 255, 0.1);
 border: 2px solid #000000;
 border-radius: 15px;
 padding: 15px;
 margin: 0 auto;
 margin-bottom: 30px;
+box-shadow: 10px 10px 10px 2px rgba(255, 255, 255, 0.2);
 `;
 
 export const todoLabelStyle = `
@@ -87,9 +97,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 30px;
-background: #ffffff;
-border: 2px solid #ffffff;
+background-color: rgba(0, 0, 0, 0.6);
+border: 2px solid #000;
 border-radius: 15px;
+color: rgba(255, 255, 255, 0.8);
 `;
 
 export const todoLabelCheckboxStyle = `
@@ -114,7 +125,8 @@ height: 50px;
 width: 120px;
 padding: 5px;
 font-size: 25px;
-background-color: #fff;
-border: 2px solid #fff;
+background-color: rgba(0, 0, 0, 0.7);
+border: 2px solid #000;
 border-radius: 10px;
+color: rgba(255, 255, 255, 0.8);
 `;

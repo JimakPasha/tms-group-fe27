@@ -207,8 +207,10 @@ export function app() {
         todoLabelCheckbox.style.cssText = todoLabelCheckboxStyle;
     
         if (todoLabelCheckbox.checked) {
+            todoText.style.backgroundColor = '#000';
             todoLabelSpan.innerHTML = '&#10003';
-            itemTodoPanel.style.backgroundColor = 'grey';
+            todoText.style.border = '2px solid #fff';
+            itemTodoPanel.style.border = '2px solid #fff';
             todoText.style.textDecoration = 'line-through';
         }
         todoLabel.append(todoLabelCheckbox, todoLabelSpan);
@@ -216,11 +218,15 @@ export function app() {
         todoLabelCheckbox.addEventListener('click', () => {
             if (todoLabelCheckbox.checked) {
                 todoLabelSpan.innerHTML = '&#10003';
-                itemTodoPanel.style.backgroundColor = 'grey';
+                todoText.style.backgroundColor = '#000';
+                todoText.style.border = '2px solid #fff';
+                itemTodoPanel.style.border = '2px solid #fff';
                 todoText.style.textDecoration = 'line-through';
             } else {
+                itemTodoPanel.style.border = '2px solid #000';
+                todoText.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                todoText.style.border = '2px solid #000';
                 todoLabelSpan.innerHTML = '-';
-                itemTodoPanel.style.backgroundColor = '#d3d3d3';
                 todoText.style.textDecoration = 'none';
             }
             todos = todos.map((item) => {
