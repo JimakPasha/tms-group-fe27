@@ -136,18 +136,7 @@ function createElement({id, date, text, isChecked}) {
     });
     updateLocalStorageTodo(toDoArr);
   });
-    
-  checkboxBtn.addEventListener('click', () => {
-    let counter = 0;
-    let checkboxChecked = document.getElementsByClassName('checkboxBtn');
-    for (let check of checkboxChecked) {
-      if (check.checked) {
-        completedTasks.innerHTML = `Completed: ${++counter}`;
-      } else {
-        completedTasks.innerHTML = `Completed: ${counter}`;
-      }
-    }
-  });
+  
 
 
 
