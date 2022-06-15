@@ -185,7 +185,20 @@ function createElement({id, date, text, isChecked}) {
     `
 
     allTasks.innerHTML = `All: ${toDoArr.length}`;
+    
 
+    checkboxBtn.addEventListener('click', () => {
+      let counter = 0;
+      let checkboxChecked = document.getElementsByClassName('checkboxBtn');
+      for (let check of checkboxChecked) {
+        if (check.checked) {
+          completedTasks.innerHTML = `Completed: ${++counter}`;
+        } else {
+          completedTasks.innerHTML = `Completed: ${counter}`;
+        }
+      }
+    });
+  
 
     task.append(checkboxBtn, inputTask, bubble);
     bubble.append(exitBtn, dateArea);
