@@ -1,0 +1,1 @@
+export const infoPanelAll = document.createElement('div');
