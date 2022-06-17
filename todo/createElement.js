@@ -2,7 +2,6 @@ import { form, formBtn, formText, formRighStyle} from './styleBlock.js';
 import { setLocalStorageTodo } from './localstorage.js';
 import { todos, setTodo } from './todo.js';
 
-
 export function createElement({id, text, isChecked, date}, todoList) {
     
     let taskForm = document.createElement('div');
@@ -28,8 +27,6 @@ export function createElement({id, text, isChecked, date}, todoList) {
     ` ;
 
     let taskFormDate = document.createElement ('div');
-    // let date = new Date();
-    // taskFormDate.innerHTML = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
     taskFormDate.innerHTML = date;
     taskFormDate.style.cssText = `
         width: 100%;
@@ -40,7 +37,6 @@ export function createElement({id, text, isChecked, date}, todoList) {
         padding: 10px;
     `;
     
-
     checkboxForm.addEventListener('click', () => {
         if (checkboxForm.checked) {
             taskFormText.style.opacity = 0.2;
@@ -58,25 +54,6 @@ export function createElement({id, text, isChecked, date}, todoList) {
             }));
             setLocalStorageTodo(todos);
     });
-    //     if (checkboxProduct.checked) {
-    //     itemProducts.style.opacity = 0.2;
-    // }
-
-    // itemProducts.addEventListener('click', () => {
-    //     if (checkboxProduct.checked) {
-    //     itemProducts.style.opacity = 0.2;
-    //     } else {
-    //     itemProducts.style.opacity = 1;
-    //     }
-    //     setTodo(todo.map((item) => {
-    //     if (item.id === id) {
-    //         item.isChecked = checkboxProduct.checked;
-    //     }
-    //     return item;
-    //     }));
-    //     setLocalStorageTodo(todo);
-    // });
-
 
     let taskFormText = document.createElement('div');
     taskFormText.classList.add('formText');
@@ -105,5 +82,4 @@ export function createElement({id, text, isChecked, date}, todoList) {
     });        
     taskForm.append(checkboxForm,  taskFormText, taskFormRight);
     taskFormRight.append(taskFormBtnClose, taskFormDate);
-
 };

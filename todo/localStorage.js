@@ -1,4 +1,3 @@
-
 export function getLocalStorageTodo() {
     return localStorage.getItem('todo');
 }

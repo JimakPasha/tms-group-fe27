@@ -7,7 +7,6 @@ import { createElement } from './createElement.js';
 
 export function app(){
     const  root = document.querySelector('#root');
-    
     const header = document.createElement('header');
     header.classList.add('header');
     header.style.cssText = `
@@ -159,16 +158,7 @@ export function app(){
         }
         myPlans.value = '';
     });
-    
-    // lineInputDelAll.addEventListener('click', () => {
-    //     let formElements = document.querySelectorAll("div.form"); 
-    //     for(let i = 0; i < formElements.length; i++){
-    //         let element = document.querySelector('div.form');
-    //         todos.pop();
-    //         setLocalStorageTodo(todos);
-    //         element.remove();
-    //     }    
-    // });
+
     lineInputDelAll.addEventListener('click', () => {
         todos.length = 0;
         setLocalStorageTodo(todos);
