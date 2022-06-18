@@ -7,6 +7,7 @@ import { createItemProducts } from './createItemProducts.js';
 
 export function app() {
     const root = document.querySelector('#root');
+    let countTodo = JSON.parse(getLocalStorageTodo()).length;
     
     const header = document.createElement('header');
     header.classList.add('header');
@@ -33,7 +34,7 @@ export function app() {
     infoPanel.style.cssText = styleBlock;
     const infoPanelAll = document.createElement('div');
     infoPanelAll.classList.add('infoPanelAll');
-    infoPanelAll.innerHTML = 'Всего: 3';
+    infoPanelAll.innerHTML = `Всего: ${countTodo}`;
     const infoPanelAdd = document.createElement('div');
     infoPanelAdd.classList.add('infoPanelAdd');
     infoPanelAdd.innerHTML = 'Уже добавили: 1';
