@@ -1,0 +1,19 @@
+*{
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+.btnStart:hover,
+.btnPause:hover,
+.btnStop:hover,
+.btnResultScore:hover {
+   background-color: aqua;
+}
+
+.btnStart:active,
+.btnPause:active,
+.btnStop:active,
+.btnResultScore:active {
+   background-color: cornflowerblue;
+}
