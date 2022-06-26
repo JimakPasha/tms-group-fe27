@@ -1,0 +1,38 @@
+.container {
+    width: 1200px;
+    height: 100%;
+
+}
+.timer {
+
+    margin: 0 auto;
+    max-width: 310px;
+    text-align: center;
+    height: 130px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.timer__second{
+    font-size: 50px;
+}
+
+button {
+    width: 150px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #9ac8da #000 #7ad3ce;
+    border-radius: 6px;
+    background: linear-gradient(#9ac8da, #80acbd) #bbdce9;
+    transition: 0.2s;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+button:hover {
+    background: #6f94a3;
+}
