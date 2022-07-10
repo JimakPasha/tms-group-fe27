@@ -20,15 +20,11 @@ console.log(credit(5941));
 
 // task 3
 
-function trimString(line,from,after) {
-    let trim = line.slice(from,after);
-    return trim;
+function trimString(string, x, y) {
+    let result = string.toString().slice(x, y);
+    return result;
 }
-let line = prompt('Строка', '');
-let from = prompt('Значение ОТ', '');
-let after = prompt('Значение ПО', '');
-
-alert(trimString(line, before, after));
+console.log(trimString ('Homework', 1, 4))
 
 // task 4
 
@@ -100,3 +96,23 @@ function sliceChoco(n, m) {
     }
 }
 sliceChoco(0, 10);
+
+function calcPrise(balance) {
+    let Phones = 0;
+    let priceWithTax = amountWithTax(pricePhone + priceAccessory);
+
+    alert ( 'Сумма покупки с налогом' + priceWithTax.toFixed(2) + '$');
+    
+    while (balance >= priceWithTax) {
+        balance = balance - priceWithTax ;
+            Phones++;
+        if (Phones > 0) {
+        alert ('Вы совершили покупку!' + Phones);
+        }  else {
+            alert ('У Вас недостаточно средств!');
+        }
+    }
+    alert ('Нужно накопить ещё немного денег!')
+};
+
+calcPrise(balance);
