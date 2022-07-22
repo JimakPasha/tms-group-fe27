@@ -34,7 +34,7 @@ stewie.buildWebsite();
 stewie.startWork();
 stewie.endWork();
 
-const nicole = Backend('Nicole', 'EA Games');
+const nicole = new Backend('Nicole');
 nicole.buildServer();
 nicole.startWork(),
 nicole.endWork();
